@@ -1,0 +1,176 @@
+[
+  {
+    "id": 129,
+    "title": "Spirited Away",
+    "overview": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.",
+    "poster_path": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+    "backdrop_path": "/6oaL4DP75yABrd5EbC4H2zq5ghc.jpg",
+    "vote_average": 8.536,
+    "release_date": "2001-07-20",
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "GAp2_0JJskk",
+    "logo_path": "/hkUi1Z15Ymj9GNamWQkzUhehLuy.png",
+    "custom_link": "/watch/spirited-away-hd",
+    "title_image_url": null,
+    "custom_trailer_url": null
+  },
+  {
+    "id": 157336,
+    "title": "Interstellar",
+    "overview": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+    "poster_path": "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    "backdrop_path": "/8sNiAPPYU14PUepFNeSNGUTiHW.jpg",
+    "vote_average": 8.453,
+    "release_date": "2014-11-05",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "LY19rHKAaAg",
+    "logo_path": "/5yWlWp7Obmfn6ztpf1408JJ6L7o.png",
+    "custom_link": "/watch/interstellar-extended",
+    "title_image_url": null,
+    "custom_trailer_url": null
+  },
+  {
+    "id": 496243,
+    "title": "Parasite",
+    "overview": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.",
+    "poster_path": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+    "backdrop_path": "/hiKmpZMGZsrkA3cdce8a7Dpos1j.jpg",
+    "vote_average": 8.501,
+    "release_date": "2019-05-30",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "bM9QabAojCg",
+    "logo_path": "/eEGZWCv0OYbMLCaNsDl1cgrvnWR.png",
+    "custom_link": "/watch/parasite-commentary",
+    "title_image_url": "https://image.tmdb.org/t/p/original/5M6zMTBu6TUAAbY3d43XEyQpOMD.png",
+    "custom_trailer_url": null
+  },
+  {
+    "id": 27205,
+    "title": "Inception",
+    "overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious.",
+    "poster_path": "/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg",
+    "backdrop_path": "/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
+    "vote_average": 8.369,
+    "release_date": "2010-07-15",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "cdx31ak4KbQ",
+    "logo_path": "/8ThUfwQKqcNk6fTOVaWOts3kvku.png",
+    "custom_link": "/watch/inception-custom",
+    "title_image_url": "https://image.tmdb.org/t/p/original/8ZTVqvKDQ8emSGUEMjsSzoWviJ7.png",
+    "custom_trailer_url": "https://www.youtube.com/embed/8hP9D6kZseM"
+  },
+  {
+    "id": 155,
+    "title": "The Dark Knight",
+    "overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
+    "poster_path": "/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    "backdrop_path": "/oOv2oUXcAaNXakRqUPxYq5lJURz.jpg",
+    "vote_average": 8.519,
+    "release_date": "2008-07-16",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "_PZpmTj1Q8Q",
+    "logo_path": "/nO5Uix3Qr4WjOyU1BMPv0okyNWm.png",
+    "custom_link": "/watch/dark-knight-imax",
+    "title_image_url": "https://image.tmdb.org/t/p/original/ldfNeTvQ4QcOMtE4F8qUAbdrS4A.png",
+    "custom_trailer_url": null
+  },
+  {
+    "id": 603,
+    "title": "The Matrix",
+    "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+    "poster_path": "/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
+    "backdrop_path": "/icmmSD4vTTDKOq2vvdulafOGw93.jpg",
+    "vote_average": 8.224,
+    "release_date": "1999-03-31",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "d0XTFAMmhrE",
+    "logo_path": "/kA8phmxG7h4BIN061fiutckq9Ho.png",
+    "custom_link": "/watch/matrix-special",
+    "title_image_url": "https://image.tmdb.org/t/p/original/dUPKMhCOznGgcX1k4dVrA3f05sI.png",
+    "custom_trailer_url": null
+  }
+]
