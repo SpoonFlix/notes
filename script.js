@@ -366,17 +366,15 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
              return;
         }
 
-        // 1. Handle "New Releases"
+        // 1. Handle "New Releases" - Create the row if any items are marked as new
         const newItems = sourceData.filter(item => item.new === true);
-        const regularItems = sourceData.filter(item => item.new !== true); // Items not marked as new
-
         if (newItems.length > 0) {
             createLocalItemsRow("New Releases", newItems, pageContainer);
         }
 
-        // 2. Group remaining items by Genre
+        // 2. Group ALL items by Genre (including those marked as new)
         const itemsByGenre = {};
-        regularItems.forEach(item => {
+        sourceData.forEach(item => { // Process the entire sourceData array
             if (item.genres && Array.isArray(item.genres)) {
                 item.genres.forEach(genre => {
                     if (genre && genre.name) {
