@@ -151,6 +151,30 @@
     "custom_trailer_url": "https://www.youtube.com/embed/W1IgJoRJ34Q",
     "featured": true,
     "new": true
+  },{
+    "id": 7220,
+    "title": "The Punisher",
+    "overview": "When undercover FBI agent Frank Castle's wife and son are slaughtered, he becomes the Punisher, a ruthless vigilante willing to go to any length to avenge his family.",
+    "poster_path": "/7rmA1HwYp2GKM85BL0cVwCaosGr.jpg",
+    "backdrop_path": "/wkjM3jCaZPUYNeibL9rNzgOIjkm.jpg",
+    "vote_average": 8,
+    "release_date": "2004-04-16",
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Drama"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/2kEOgOulXDZmteZqoSe2aqUjouX.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/wh687anc4i6opzx9qvjtt/Punisher.webm?rlkey=5acf1qhvqjy3usteh6wfw793h&st=xgjz0n6n&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/jNT92z4NGSQ",
+    "featured": false,
+    "new": false
   },
   {
     "id": 957,
@@ -162,7 +186,8 @@
     "release_date": "1987-06-20",
     "genres": [
       { "name": "Sci-Fi" },
-      { "name": "Comedy" }
+      { "name": "Comedy" },
+      { "name": "Fantasy" }
     ],
     "type": "movie",
     "trailer_key": "",
@@ -225,9 +250,6 @@
     "release_date": "1996-12-20",
     "genres": [
       {
-        "name": "Crime"
-      },
-      {
         "name": "Horror"
       },
       {
@@ -267,6 +289,27 @@
     "custom_trailer_url": "https://www.youtube.com/embed/PjPSqp12wtk",
     "featured": false,
     "new": false
+  },{
+    "id": 550,
+    "title": "Fight Club",
+    "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+    "poster_path": "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+    "backdrop_path": "/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
+    "vote_average": 8.4,
+    "release_date": "1999-10-15",
+    "genres": [
+      {
+        "name": "Action"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/7Uqhv24pGJs4Ns31NoOPWFJGWNG.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/9h1bcwnc0d6asono916sn/Fight.Club.webm?rlkey=z2bz7yeeli09i6vv9vohqrt9z&st=vxwuh3w7&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": null,
+    "featured": false,
+    "new": false
   },
   {
     "id": 13335,
@@ -292,6 +335,27 @@
     "custom_trailer_url": "https://www.youtube.com/embed/5oNaUdMz4YE",
     "featured": false,
     "new": false
+  },{
+    "id": 12133,
+    "title": "Step Brothers",
+    "overview": "Brennan Huff and Dale Doback might be grown men. But that doesn't stop them from living at home and turning into jealous, competitive stepbrothers when their single parents marry. Brennan's constant competition with Dale strains his mom's marriage to Dale's dad, leaving everyone to wonder whether they'll ever see eye to eye.",
+    "poster_path": "/wRR6U3K3v2iQsG3uw7ehz1ctRyT.jpg",
+    "backdrop_path": "/e3msiPOj74UVgrLAmxROCtV22sx.jpg",
+    "vote_average": 8,
+    "release_date": "2008-07-25",
+    "genres": [
+      {
+        "name": "Comedy"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/crH2lvkQbdIKM6scZsgnUfhF4B6.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/t8u6j455g7zkeusx9l98j/Step.Brothers.webm?rlkey=5n1rzfv1kfteai6bzblt6yn3e&st=amj4lz8s&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/CewglxElBK0",
+    "featured": false,
+    "new": false
   },
   {
     "id": 3049,
@@ -314,6 +378,30 @@
     "custom_trailer_url": "https://www.youtube.com/embed/ZZ1-ajPbMo8",
     "featured": false,
     "new": false
+  },{
+    "id": 8363,
+    "title": "Superbad",
+    "overview": "Two co-dependent high school seniors are forced to deal with separation anxiety after their plan to stage a booze-soaked party goes awry.",
+    "poster_path": "/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg",
+    "backdrop_path": "/mFt3dvxKugYPgUQgV16M6K2nEtc.jpg",
+    "vote_average": 8,
+    "release_date": "2007-08-17",
+    "genres": [
+      {
+        "name": "Comedy"
+      },
+      {
+        "name": "Adventure"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/92EBulk0efyT9d8MwYlcauOASDa.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/7ycaqdf0mszj213xezqkl/Superbad-Unrated.webm?rlkey=g9h9vtv6bs05sxn01zaapaee7&st=1p0g6o03&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/q3UFV1in5Qk",
+    "featured": false,
+    "new": false
   },
   {
     "id": 9273,
@@ -324,7 +412,6 @@
     "vote_average": 6,
     "release_date": "1995-11-10",
     "genres": [
-      { "name": "Crime" },
       { "name": "Comedy" },
       { "name": "Adventure" }
     ],
@@ -456,8 +543,7 @@
     "release_date": "1988-06-22",
     "genres": [
       { "name": "Comedy" },
-      { "name": "Animation" },
-      { "name": "Crime" }
+      { "name": "Animation" }
     ],
     "type": "movie",
     "trailer_key": "d0XTFAMmhrE",
