@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
     } // <-- Add missing closing brace for setupScrolling here
 
     // --- Main Population Logic ---
-    // Now accepts data as an argument
+    // Groups items by genre and creates rows
     function populatePageContent(movies, shows) {
         if (!pageContainer) {
             console.error("Page container not found!");
@@ -331,23 +331,25 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
         const isMoviesPage = window.location.pathname.endsWith('/') || window.location.pathname.endsWith('index.html');
         const isShowsPage = window.location.pathname.endsWith('shows.html');
 
-        let itemsToDisplay = [];
-        let pageTitle = "";
+        let sourceData = [];
+        let pageType = '';
 
         if (isMoviesPage) {
-            itemsToDisplay = movies; // Use passed movies data
-            pageTitle = "Movies";
-            console.log("Using fetched moviesData:", itemsToDisplay ? itemsToDisplay.length : 0, "entries");
-            if (!itemsToDisplay) {
+            sourceData = movies;
+            pageType = 'movies';
+            console.log("Processing fetched moviesData:", sourceData ? sourceData.length : 0, "entries");
+            if (!sourceData) {
                  pageContainer.innerHTML = `<h2>Error loading movie data.</h2>`;
                  if (featuredCarousel) featuredCarousel.style.display = 'none';
                  return;
             }
+             // Setup carousel only on movies page with fetched movies
+             setupFeaturedCarousel(sourceData);
         } else if (isShowsPage) {
-            itemsToDisplay = shows; // Use passed shows data (currently empty/not fetched)
-            pageTitle = "TV Shows";
-             console.log("Using fetched showsData:", itemsToDisplay ? itemsToDisplay.length : 0, "entries");
-             if (!itemsToDisplay) {
+            sourceData = shows;
+            pageType = 'shows';
+             console.log("Processing fetched showsData:", sourceData ? sourceData.length : 0, "entries");
+             if (!sourceData) {
                  pageContainer.innerHTML = `<h2>Error loading show data.</h2>`;
                  return;
              }
@@ -358,15 +360,50 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
             return;
         }
 
-        // Populate content using the itemsToDisplay array
-        if (itemsToDisplay && itemsToDisplay.length > 0) {
-            createLocalItemsRow(pageTitle, itemsToDisplay, pageContainer);
-            if (isMoviesPage) {
-                setupFeaturedCarousel(itemsToDisplay); // Setup carousel only on movies page with fetched movies
-            }
-        } else {
-            pageContainer.innerHTML = `<h2>No ${isMoviesPage ? 'movies' : 'shows'} found.</h2>`;
+        if (!sourceData || sourceData.length === 0) {
+             pageContainer.innerHTML = `<h2>No ${pageType} found.</h2>`;
              if (isMoviesPage && featuredCarousel) featuredCarousel.style.display = 'none';
+             return;
+        }
+
+        // 1. Handle "New Releases"
+        const newItems = sourceData.filter(item => item.new === true);
+        const regularItems = sourceData.filter(item => item.new !== true); // Items not marked as new
+
+        if (newItems.length > 0) {
+            createLocalItemsRow("New Releases", newItems, pageContainer);
+        }
+
+        // 2. Group remaining items by Genre
+        const itemsByGenre = {};
+        regularItems.forEach(item => {
+            if (item.genres && Array.isArray(item.genres)) {
+                item.genres.forEach(genre => {
+                    if (genre && genre.name) {
+                        if (!itemsByGenre[genre.name]) {
+                            itemsByGenre[genre.name] = [];
+                        }
+                        // Avoid adding duplicates to the same genre row if an item somehow got processed twice
+                        if (!itemsByGenre[genre.name].some(existing => existing.id === item.id)) {
+                             itemsByGenre[genre.name].push(item);
+                        }
+                    }
+                });
+            }
+        });
+
+        // 3. Create rows for each genre, sorted alphabetically by genre name
+        const sortedGenres = Object.keys(itemsByGenre).sort();
+        sortedGenres.forEach(genreName => {
+            createLocalItemsRow(genreName, itemsByGenre[genreName], pageContainer);
+        });
+
+        // Handle case where there are only 'new' items and no regular items
+        if (newItems.length > 0 && regularItems.length === 0) {
+             console.log("Only 'New Releases' items found.");
+        } else if (newItems.length === 0 && regularItems.length === 0 && sourceData.length > 0) {
+            // This case shouldn't happen if sourceData has items, but as a fallback
+             pageContainer.innerHTML = `<h2>No ${pageType} found to display in categories.</h2>`;
         }
     }
 
@@ -437,7 +474,7 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
                     ${titleDisplay}
                     <p class="featured-rating">Rating: ${rating} / 10</p>
                     <p class="featured-overview">${item.overview || 'No description available.'}</p>
-                    <button class="play-button-banner" data-item-id="${item.id}">ℹ️ More Info</button>
+                    <button class="play-button-banner" data-item-id="${item.id}">Play</button>
                  </div>
             `;
             // Set the backdrop as a background style for the banner item (optional, depends on CSS)
@@ -493,9 +530,16 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
     // --- Initial Setup ---
     // Fetch data and then populate the page
     async function initializePage() {
-        // Fetch movies (and potentially shows later)
-        allMoviesData = await fetchData('data/movies_data.json');
-        // allShowsData = await fetchData('data/shows_data.json'); // Example if shows needed fetching
+        // Fetch both movies and shows data
+        // Use Promise.all to fetch concurrently
+        const [movies, shows] = await Promise.all([
+            fetchData('data/movies_data.json'),
+            fetchData('data/shows_data.json') // Fetch shows data
+        ]);
+
+        // Store fetched data globally (optional, but can be useful)
+        allMoviesData = movies;
+        allShowsData = shows;
 
         // Now populate the page with the fetched data
         populatePageContent(allMoviesData, allShowsData);

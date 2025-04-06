@@ -23,7 +23,8 @@
     "custom_link": null,
     "title_image_url": null,
     "custom_trailer_url": null,
-    "featured": false
+    "featured": false,
+    "new": false
   },
   {
     "id": 71446,
@@ -49,6 +50,7 @@
     "custom_link": null,
     "title_image_url": null,
     "custom_trailer_url": null,
-    "featured": false
+    "featured": false,
+    "new": false
   }
 ]
