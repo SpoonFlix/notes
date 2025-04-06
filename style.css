@@ -24,9 +24,10 @@ body.modal-open > *:not(.movie-details) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 4%; /* Keep padding */
-    /* Make background fully transparent */
-    background: transparent;
+    padding: 20px 4%; /* Increased top/bottom padding */
+    /* background-color: rgba(20, 20, 20, 0.9); /* Replaced by gradient */
+    /* Darker gradient */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
     position: fixed; /* Keep fixed */
     top: 0;
     left: 0; /* Added left: 0 */
@@ -40,19 +41,17 @@ body.modal-open > *:not(.movie-details) {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding-top: 10px; /* Added top padding */
 }
 
 .center-logo {
     position: absolute; /* Center logo absolutely */
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 10px; /* Added top padding */
 }
 
 /* Style for the logo image */
 .logo-image {
-    height: 80px; /* Significantly increased logo height */
+    height: 50px; /* Increased logo height */
     vertical-align: middle; /* Align image nicely with links */
 }
 
@@ -63,7 +62,6 @@ body.modal-open > *:not(.movie-details) {
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.2s;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
 }
 
 .nav-link:hover,
@@ -77,11 +75,10 @@ body.modal-open > *:not(.movie-details) {
 /* Style for the search icon */
 .search-icon {
     color: #fff;
-    font-size: 1.8rem; /* Slightly larger icon */
+    font-size: 1.6rem; /* Adjust size */
     cursor: pointer;
     vertical-align: middle; /* Align icon nicely */
     transition: color 0.2s;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
 }
 .search-icon:hover {
     color: #b3b3b3;
@@ -90,7 +87,7 @@ body.modal-open > *:not(.movie-details) {
 
 /* Add padding to body top to prevent content from hiding under fixed header */
 body {
-    /* Keep padding top to ensure content starts below the fixed header area */
+    /* Adjusted padding top slightly based on new header padding */
     padding-top: 90px;
 }
 
@@ -128,7 +125,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 80%); /* Darker gradient */
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0) 70%); /* Darker gradient */
     z-index: 1; /* Below text, above image */
 }
 

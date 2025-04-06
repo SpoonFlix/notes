@@ -7,12 +7,23 @@
     <link rel="stylesheet" href="style.css">
     <!-- Material Icons Link -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Basic styling for the coming soon message */
+        .coming-soon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 100px); /* Adjust height considering header */
+            font-size: 2rem;
+            color: #e5e5e5;
+        }
+    </style>
 </head>
 <body>
     <header class="main-header">
         <nav class="left-nav">
-            <a href="index.html" class="nav-link" title="Movies"><span class="material-icons">movie</span></a> <!-- Replaced text with icon -->
-            <a href="shows.html" class="nav-link active" title="Shows"><span class="material-icons">tv</span></a> <!-- Replaced text with icon -->
+            <a href="index.html" class="nav-link" title="Movies"><span class="material-icons">movie</span></a>
+            <a href="shows.html" class="nav-link active" title="Shows"><span class="material-icons">tv</span></a> <!-- Added active class -->
         </nav>
         <div class="center-logo">
             <!-- Logo Image -->
@@ -26,9 +37,10 @@
     </header>
 
     <!-- Coming Soon Message -->
-    <div style="text-align: center; padding-top: 100px;">
+    <div class="coming-soon">
         <h1>Coming Soon</h1>
-        <p>This section is under construction.</p>
     </div>
+
+    <!-- Removed script tag and modal HTML -->
 </body>
 </html>
