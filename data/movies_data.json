@@ -26,6 +26,176 @@
     "custom_trailer_url": "https://www.youtube.com/embed/fDUFP7EeXLE",
     "featured": true,
     "new": false
+  },{
+    "id": 16340,
+    "title": "Rugrats in Paris: The Movie",
+    "overview": "A group of rambunctious toddlers travel a trip to Paris. As they journey from the Eiffel Tower to Notre Dame, they learn new lessons about trust, loyalty and love.",
+    "poster_path": "/gsuoVtmQEuXFwoXEi9pSLW49umi.jpg",
+    "backdrop_path": "/9yxIBACv6GZs9JrhizDW6SEYaNu.jpg",
+    "vote_average": 6.6,
+    "release_date": "2000-11-17",
+    "genres": [
+      {
+        "name": "Animation"
+      },
+      {
+        "name": "Family"
+      },
+      {
+        "name": "Comedy"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/t9GrPPlNjXnC2yPFWvXVlqvzyn9.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/s2wv2j9ilem7is58u4ecd/Rugrats.In.Paris.The.Movie.2000.1080p.AMZN.WEBRip.1400MB.DD5.1.x264-GalaxyRG.webm?rlkey=12q6x36og2rm8336wfu1nqavu&st=oavuxhwl&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://youtube.com/embed/hQkbeurqfQo",
+    "featured": false,
+    "new": true
+  },
+  {
+    "id": 20694,
+    "title": "Rugrats Go Wild",
+    "overview": "When the Rugrats find themselves stranded on a deserted island, they meet the Thornberrys, a family who agrees to help them escape.",
+    "poster_path": "/hpVpXRNY2IsU0xvfXtYOxu0QDwc.jpg",
+    "backdrop_path": "/doPPODsoTbrMXQWvOAIcRYsD3Yg.jpg",
+    "vote_average": 6.3,
+    "release_date": "2003-06-13",
+    "genres": [
+      {
+        "name": "Animation"
+      },
+      {
+        "name": "Family"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Comedy"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/zjB7t0R2v6kOFSjBM3NdXSDojKT.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/0jotr6zwvwgbdd1wysy8p/Rugrats-Go-Wild.webm?rlkey=s68etkeqb106rrm0s3m6mdmwg&st=9v6q3sur&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/Pb8FpdXuU8U",
+    "featured": false,
+    "new": true
+  },
+  {
+    "id": 2493,
+    "title": "The Princess Bride",
+    "overview": "In this enchantingly cracked fairy tale, the beautiful Princess Buttercup and the dashing Westley must overcome staggering odds to find happiness amid six-fingered swordsmen, murderous princes, Sicilians and rodents of unusual size. But even death can't stop these true lovebirds from triumphing.",
+    "poster_path": "/kTXxdNv44najTayFcrT487xWuDv.jpg",
+    "backdrop_path": "/2CisgvF2HcIVnbMZbSjASCtSgEb.jpg",
+    "vote_average": 8,
+    "release_date": "1987-09-25",
+    "genres": [
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Fantasy"
+      },
+      {
+        "name": "Romance"
+      },
+      {
+        "name": "Family"
+      },
+      {
+        "name": "Fantasy"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/dOxe2Jeyol7u9pUDqd4iVq2KLIV.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/0bdrkncu2v2wm2qx45f4o/The.Princess.Bride.1987.REMASTERED.720p.BluRay.999MB.HQ.x265.10bit-GalaxyRG.webm?rlkey=bzzupijqexr3js3xefqzajopk&st=rjkbdcid&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/Nq30P5tEY0I",
+    "featured": false,
+    "new": true
+  },
+  {
+    "id": 8193,
+    "title": "Napoleon Dynamite",
+    "overview": "A listless and alienated teenager decides to help his new friend win the class presidency in their small western high school, while he must deal with his bizarre family life back home.",
+    "poster_path": "/6Iv6Uwa2SBLN0dSGM00rdrwN4MJ.jpg",
+    "backdrop_path": "/gn9YD95hjt4sAH8hr1E363VZ9bN.jpg",
+    "vote_average": 6.8,
+    "release_date": "2004-06-11",
+    "genres": [
+      {
+        "name": "Comedy"
+      },
+      {
+        "name": "Family"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/vU1p1jRJNmc8zrmpRdiLZI3yRxu.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/zcbuwz0e9hrhu18nbrgo6/Napoleon.Dynamite.2004.720p.BrRip.x264.webm?rlkey=t8pb619uoniupuo2hp4gcpyyg&st=jxfg6s0r&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/W1IgJoRJ34Q",
+    "featured": true,
+    "new": true
+  },
+  {
+    "id": 957,
+    "title": "Spaceballs",
+    "overview": "When the nefarious Dark Helmet hatches a plan to snatch Princess Vespa and steal her planet's air, space-bum-for-hire Lone Starr and his clueless sidekick fly to the rescue. Along the way, they meet Yogurt, who puts Lone Starr wise to the power of "The Schwartz." Can he master it in time to save the day?",
+    "poster_path": "/cIbr9JRJX4jENulVETd4cAofTAA.jpg",
+    "backdrop_path": "/p50q3DO1DTFhKH5CqNLRGio6zCo.jpg",
+    "vote_average": 6.8,
+    "release_date": "1987-06-20",
+    "genres": [
+      {
+        "name": "Sci-Fi"
+      },
+      {
+        "name": "Comedy"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/rB2gymygCnQ9tlzM622InAxZPBd.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/vaug87jory4peh6ggq123/Space-Balls-BRRip-720p-XviD-KiNGDOM.webm?rlkey=nba8kiq80ta8epwfm1rf8oxpc&st=bq24a3dw&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/RK0yd4LtLdg",
+    "featured": false,
+    "new": true
+  },
+  {
+    "id": 129,
+    "title": "Default",
+    "overview": "Default",
+    "poster_path": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+    "backdrop_path": "/6oaL4DP75yABrd5EbC4H2zq5ghc.jpg",
+    "vote_average": 8.536,
+    "release_date": "2001-07-20",
+    "genres": [
+      {
+        "name": "Animation"
+      },
+      {
+        "name": "Family"
+      },
+      {
+        "name": "Fantasy"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "GAp2_0JJskk",
+    "logo_path": "/hkUi1Z15Ymj9GNamWQkzUhehLuy.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/ntvyyi2ofqg3cgtbh7txe/Spirited-Away.webm?rlkey=qjozxx3jlv3a6hhahl7i9qplm&st=gih69454&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/fDUFP7EeXLE",
+    "featured": true,
+    "new": false
   },
   {
     "id": 157336,
