@@ -105,10 +105,56 @@
       },
       {
         "name": "Family"
+      }{
+    "id": 1022690,
+    "title": "Ricky Stanicky",
+    "overview": "When three childhood best friends pull a prank gone wrong, they invent the imaginary Ricky Stanicky to get them out of trouble. Twenty years later, the trio still uses the nonexistent Ricky as a handy alibi for their immature behavior. But when their spouses and partners get suspicious and demand to finally meet the fabled Mr. Stanicky, the guilty trio decide to hire a washed-up actor and raunchy celebrity impersonator to bring him to life.",
+    "poster_path": "/oJQdLfrpl4CQsHAKIxd3DJqYTVq.jpg",
+    "backdrop_path": "/gnf8bKOjQAl6T3JZxQqVhAWWBmO.jpg",
+    "vote_average": 7.1,
+    "release_date": "2024-02-21",
+    "genres": [
+      {
+        "name": "Comedy"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/47YkEDaw4xbHaoiAd9IBe8Bjrt4.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/z4lq75x6bihsilfc4wi06/Ricky.Stanicky.2024.720p.WEBRip.x264.AAC-YTS.MX.webm?rlkey=j9yi8buk123ot5490mves5bn4&st=gfnwslhj&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/WXpBN_31-Cw",
+    "featured": true,
+    "new": true
+  },
+  {
+    "id": 22538,
+    "title": "Scott Pilgrim vs. the World",
+    "overview": "As bass guitarist for a garage-rock band, Scott Pilgrim has never had trouble getting a girlfriend; usually, the problem is getting rid of them. But when Ramona Flowers skates into his heart, he finds she has the most troublesome baggage of all: an army of ex-boyfriends who will stop at nothing to eliminate him from her list of suitors.",
+    "poster_path": "/g5IoYeudx9XBEfwNL0fHvSckLBz.jpg",
+    "backdrop_path": "/rl6TA8Hhvc3f5LR59WiCBo9QxSa.jpg",
+    "vote_average": 7.8,
+    "release_date": "2010-08-13",
+    "genres": [
+      {
+        "name": "Action"
       },
       {
-        "name": "Fantasy"
+        "name": "Comedy"
+      },
+      {
+        "name": "Romance"
       }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/zzdpsN1AYh0qsIqiveRpPkpgkJi.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/k4n8ru54m6aqcovzea94p/Scott-Pilgrim-Vs-The-World-2010-1080p-BluRay-HEVC-H265-BONE.webm?rlkey=001tn691wxzzgukmzga7lhma3&st=y9oucyub&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": null,
+    "featured": true,
+    "new": true
+  },
     ],
     "type": "movie",
     "trailer_key": "",
