@@ -205,8 +205,7 @@
     "release_date": "1975-20-06",
     "genres": [
       { "name": "Adventure" },
-      { "name": "Horror" },
-      { "name": "Thriller" }
+      { "name": "Horror" }
     ],
     "type": "movie",
     "trailer_key": "LY19rHKAaAgg",
@@ -215,6 +214,83 @@
     "title_image_url": null,
     "custom_trailer_url": "https://www.youtube.com/embed/BU_j7fyBF-A",
     "featured": true,
+    "new": false
+  },{
+    "id": 4232,
+    "title": "Scream",
+    "overview": "A year after the murder of her mother, a teenage girl is terrorized by a masked killer who targets her and her friends by using scary movies as part of a deadly game.",
+    "poster_path": "/lr9ZIrmuwVmZhpZuTCW8D9g0ZJe.jpg",
+    "backdrop_path": "/4w6nQYAY0eb7B0VVRDXilXcgAUV.jpg",
+    "vote_average": 7.4,
+    "release_date": "1996-12-20",
+    "genres": [
+      {
+        "name": "Crime"
+      },
+      {
+        "name": "Horror"
+      },
+      {
+        "name": "Mystery"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/2CQ4FR4WLPOJdAV0zP9RaJD1Tbh.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/6n23iz87z2i16w5s3xrn8/Scream-1996.720p.BrRip.x264.YIFY.webm?rlkey=2gwtx1zexw3tvqhm3q4cy1t3v&st=1gj1k4m8&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/YjGSwuaf20g",
+    "featured": false,
+    "new": true
+  },
+  {
+    "id": 11282,
+    "title": "Harold & Kumar Go to White Castle",
+    "overview": "Nerdy accountant Harold and his irrepressible friend, Kumar, get stoned watching television and find themselves utterly bewitched by a commercial for White Castle. Convinced there must be one nearby, the two set out on a late-night odyssey that takes them deep into New Jersey. Somehow, the boys manage to run afoul of rednecks, cops and even a car-stealing Neil Patrick Harris before getting anywhere near their beloved sliders.",
+    "poster_path": "/ggfkCxjp8zjrIlsRArWd7Tls6c6.jpg",
+    "backdrop_path": "/6llCvjW3CRR3uLWXkzCDCihC8jq.jpg",
+    "vote_average": 6.5,
+    "release_date": "2004-07-30",
+    "genres": [
+      {
+        "name": "Comedy"
+      },
+      {
+        "name": "Adventure"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/5uNLcFEI6lgi4bqtH2IJLc9s5fU.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/mgq95bsvgwy3qq269dg1b/Harold.and.Kumar.Go.To.White.Castle.2004.UNRATED.BrRip.x264.YIFY.webm?rlkey=b9e1yudo4w7lzm6vttpoyfohy&st=m0v0f1i4&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/PjPSqp12wtk",
+    "featured": false,
+    "new": false
+  },
+  {
+    "id": 13335,
+    "title": "Harold & Kumar Escape from Guantanamo Bay",
+    "overview": "Having satisfied their urge for White Castle, Harold and Kumar jump on a plane to catch up with Harold's love interest, who's headed for the Netherlands. But the pair must change their plans when Kumar is accused of being a terrorist. Rob Corddry also stars in this wild comedy sequel that follows the hapless stoners' misadventures as they try to avoid being captured by the Department of Homeland Security.",
+    "poster_path": "/gmXKlm8c8O7JEISYP4WiWq2x3We.jpg",
+    "backdrop_path": "/7Q1SGTuIDkTnKRonEhmYUefQP79.jpg",
+    "vote_average": 6.3,
+    "release_date": "2008-04-25",
+    "genres": [
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Comedy"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/4YaitTMmzkw7yknMdDP0LCaA8LL.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/z14vyl8i6hz0n4q4slu76/Harold.and.Kumar.Escape.From.Guantanamo.Bay.2008.UNRATED.BrRip.720p.x264.YIFY.webm?rlkey=n0nvr40n3622x2xtv5jboj9f2&st=pt3fvrrj&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/5oNaUdMz4YE",
+    "featured": false,
     "new": false
   },
   {
