@@ -27,7 +27,8 @@
     "custom_link": "https://dl.dropbox.com/scl/fi/ntvyyi2ofqg3cgtbh7txe/Spirited-Away.webm?rlkey=qjozxx3jlv3a6hhahl7i9qplm&st=gih69454&dl=0",
     "title_image_url": null,
     "custom_trailer_url": "https://www.youtube.com/embed/fDUFP7EeXLE",
-    "featured": true
+    "featured": true,
+    "new": false
   },
   {
     "id": 157336,
@@ -57,7 +58,39 @@
     "custom_link": "https://dl.dropbox.com/scl/fi/yoi7txd2p4g2645yyoyyf/interstellar.webm?rlkey=th74l3qm4xkizma66ut22j5m2&st=zgcyhw2h&dl=0",
     "title_image_url": null,
     "custom_trailer_url": null,
-    "featured": true
+    "featured": true,
+    "new": false
+  },
+  {
+    "id": 157336,
+    "title": "Interstellar",
+    "overview": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+    "poster_path": "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    "backdrop_path": "/8sNiAPPYU14PUepFNeSNGUTiHW.jpg",
+    "vote_average": 8.453,
+    "release_date": "2014-11-05",
+    "genres": [
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "type": "show",
+    "trailer_key": "LY19rHKAaAg",
+    "logo_path": "/5yWlWp7Obmfn6ztpf1408JJ6L7o.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/yoi7txd2p4g2645yyoyyf/interstellar.webm?rlkey=th74l3qm4xkizma66ut22j5m2&st=zgcyhw2h&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": null,
+    "featured": true,
+    "new": false
   },
   {
     "id": 496243,
@@ -87,7 +120,8 @@
     "custom_link": "/watch/parasite-commentary",
     "title_image_url": "https://image.tmdb.org/t/p/original/5M6zMTBu6TUAAbY3d43XEyQpOMD.png",
     "custom_trailer_url": null,
-    "featured": false
+    "featured": false,
+    "new": false
   },
   {
     "id": 27205,
@@ -117,7 +151,8 @@
     "custom_link": "/watch/inception-custom",
     "title_image_url": "https://image.tmdb.org/t/p/original/8ZTVqvKDQ8emSGUEMjsSzoWviJ7.png",
     "custom_trailer_url": "https://www.youtube.com/embed/8hP9D6kZseM",
-    "featured": false
+    "featured": false,
+    "new": false
   },
   {
     "id": 155,
@@ -151,7 +186,8 @@
     "custom_link": "/watch/dark-knight-imax",
     "title_image_url": "https://image.tmdb.org/t/p/original/ldfNeTvQ4QcOMtE4F8qUAbdrS4A.png",
     "custom_trailer_url": null,
-    "featured": false
+    "featured": false,
+    "new": false
   },
   {
     "id": 603,
@@ -177,6 +213,7 @@
     "custom_link": "/watch/matrix-special",
     "title_image_url": "https://image.tmdb.org/t/p/original/dUPKMhCOznGgcX1k4dVrA3f05sI.png",
     "custom_trailer_url": null,
-    "featured": false
+    "featured": false,
+    "new": false
   }
 ]
