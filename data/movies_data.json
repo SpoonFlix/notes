@@ -147,7 +147,7 @@
   {
     "id": 957,
     "title": "Spaceballs",
-    "overview": "When the nefarious Dark Helmet hatches a plan to snatch Princess Vespa and steal her planet's air, space-bum-for-hire Lone Starr and his clueless sidekick fly to the rescue. Along the way, they meet Yogurt, who puts Lone Starr wise to the power of "The Schwartz." Can he master it in time to save the day?",
+    "overview": "When the nefarious Dark Helmet hatches a plan to snatch Princess Vespa and steal her planet's air, space-bum-for-hire Lone Starr and his clueless sidekick fly to the rescue. Along the way, they meet Yogurt, who puts Lone Starr wise to the power of The Schwartz. Can he master it in time to save the day?",
     "poster_path": "/cIbr9JRJX4jENulVETd4cAofTAA.jpg",
     "backdrop_path": "/p50q3DO1DTFhKH5CqNLRGio6zCo.jpg",
     "vote_average": 6.8,
@@ -168,34 +168,6 @@
     "custom_trailer_url": "https://www.youtube.com/embed/RK0yd4LtLdg",
     "featured": false,
     "new": true
-  },
-  {
-    "id": 129,
-    "title": "Default",
-    "overview": "Default",
-    "poster_path": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
-    "backdrop_path": "/6oaL4DP75yABrd5EbC4H2zq5ghc.jpg",
-    "vote_average": 8.536,
-    "release_date": "2001-07-20",
-    "genres": [
-      {
-        "name": "Animation"
-      },
-      {
-        "name": "Family"
-      },
-      {
-        "name": "Fantasy"
-      }
-    ],
-    "type": "movie",
-    "trailer_key": "GAp2_0JJskk",
-    "logo_path": "/hkUi1Z15Ymj9GNamWQkzUhehLuy.png",
-    "custom_link": "https://dl.dropbox.com/scl/fi/ntvyyi2ofqg3cgtbh7txe/Spirited-Away.webm?rlkey=qjozxx3jlv3a6hhahl7i9qplm&st=gih69454&dl=0",
-    "title_image_url": null,
-    "custom_trailer_url": "https://www.youtube.com/embed/fDUFP7EeXLE",
-    "featured": true,
-    "new": false
   },
   {
     "id": 157336,
