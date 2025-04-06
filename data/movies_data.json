@@ -290,6 +290,10 @@
       {
         "id": 53,
         "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Drama"
       }
     ],
     "type": "movie",
@@ -319,7 +323,7 @@
         "name": "Animation"
       },
       {
-        "id": 28,
+        "id": 35,
         "name": "Crime"
       }
     ],
