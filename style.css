@@ -23,17 +23,17 @@ body.modal-open > *:not(.movie-details) {
 .main-header {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Ensure vertical alignment */
-    padding: 15px 4%; /* Restore padding */
-    /* Re-add subtle gradient for readability */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    align-items: center;
+    padding: 15px 4%; /* Keep padding */
+    /* Make background fully transparent */
+    background: transparent;
     position: fixed; /* Keep fixed */
     top: 0;
-    left: 0;
-    right: 0;
-    z-index: 101; /* Keep z-index */
-    /* Removed explicit height */
-    transition: background-color 0.3s ease, filter 0.3s ease-in-out; /* Added background transition */
+    left: 0; /* Added left: 0 */
+    right: 0; /* Added right: 0 */
+    z-index: 100; /* Ensure header is above content */
+    height: 60px;
+    transition: filter 0.3s ease-in-out; /* Add transition for dimming */
 }
 
 .left-nav, .right-nav {
@@ -50,9 +50,8 @@ body.modal-open > *:not(.movie-details) {
 
 /* Style for the logo image */
 .logo-image {
-    width: 220px; /* Increase width slightly more */
-    height: auto; /* Let height adjust */
-    vertical-align: middle; /* Keep vertical align */
+    height: 80px; /* Significantly increased logo height */
+    vertical-align: middle; /* Align image nicely with links */
 }
 
 /* .logo-text rule removed */
@@ -89,20 +88,14 @@ body.modal-open > *:not(.movie-details) {
 
 /* Add padding to body top to prevent content from hiding under fixed header */
 body {
-    /* Keep padding-top 0 */
-    padding-top: 0;
-}
-
-/* Optional: Add a class to header on scroll */
-.main-header.scrolled {
-    background-color: #141414; /* Solid background on scroll */
+    /* Keep padding top to ensure content starts below the fixed header area */
+    padding-top: 90px;
 }
 
 
 /* --- Featured Carousel Banner Styles --- */
 .featured-carousel {
-    position: relative; /* Keep relative */
-    margin-top: 0; /* Ensure banner starts at the very top */
+    position: relative;
     width: 100%;
     height: 56.25vw;
     max-height: 700px;
