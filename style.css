@@ -85,11 +85,7 @@ body.modal-open > *:not(.movie-details) {
 }
 /* --- End Header Styles --- */
 
-/* Add padding to body top to prevent content from hiding under fixed header */
-body {
-    /* Adjusted padding top slightly based on new header padding */
-    padding-top: 90px;
-}
+/* Removed body padding-top to allow header to overlay banner */
 
 
 /* --- Featured Carousel Banner Styles --- */
