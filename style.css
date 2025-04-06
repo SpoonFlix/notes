@@ -25,9 +25,12 @@ body.modal-open > *:not(.movie-details) {
     justify-content: space-between;
     align-items: center;
     padding: 10px 4%; /* Match section padding */
-    background-color: rgba(20, 20, 20, 0.9); /* Semi-transparent background */
-    position: sticky; /* Make header sticky */
+    /* background-color: rgba(20, 20, 20, 0.9); /* Replaced by gradient */
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.9) 0%, rgba(20, 20, 20, 0.7) 50%, rgba(20, 20, 20, 0) 100%); /* Gradient background */
+    position: fixed; /* Changed to fixed for consistent gradient */
     top: 0;
+    left: 0; /* Added left: 0 */
+    right: 0; /* Added right: 0 */
     z-index: 100; /* Ensure header is above content */
     height: 60px;
     transition: filter 0.3s ease-in-out; /* Add transition for dimming */
@@ -45,13 +48,13 @@ body.modal-open > *:not(.movie-details) {
     transform: translateX(-50%);
 }
 
-.logo-text {
-    color: #e50914; /* Netflix red */
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: -1px;
+/* Style for the logo image */
+.logo-image {
+    height: 35px; /* Adjust height as needed */
+    vertical-align: middle; /* Align image nicely with links */
 }
+
+/* .logo-text rule removed */
 
 .nav-link {
     color: #e5e5e5;
@@ -60,35 +63,31 @@ body.modal-open > *:not(.movie-details) {
     transition: color 0.2s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active { /* Style for active link */
+    color: #fff; /* Brighter color for active/hover */
+    font-weight: bold;
+}
+
+/* #search-input and #search-button rules removed */
+
+/* Style for the search icon */
+.search-icon {
+    color: #fff;
+    font-size: 1.6rem; /* Adjust size */
+    cursor: pointer;
+    vertical-align: middle; /* Align icon nicely */
+    transition: color 0.2s;
+}
+.search-icon:hover {
     color: #b3b3b3;
 }
-
-#search-input {
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid #333;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 3px;
-    font-size: 0.9rem;
-    width: 150px; /* Adjust as needed */
-    transition: width 0.3s ease-in-out;
-}
-#search-input:focus {
-     width: 200px; /* Expand on focus */
-     outline: none;
-     border-color: #555;
-}
-
-
-#search-button {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
 /* --- End Header Styles --- */
+
+/* Add padding to body top to prevent content from hiding under fixed header */
+body {
+    padding-top: 80px; /* Adjust based on header height + padding */
+}
 
 
 /* --- Featured Carousel Banner Styles --- */

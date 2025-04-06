@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix Clone</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Material Icons Link -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
         <nav class="left-nav">
-            <a href="index.html" class="nav-link">Movies</a> <!-- Link to index.html -->
-            <a href="shows.html" class="nav-link">Shows</a> <!-- Link to shows.html -->
+            <a href="index.html" class="nav-link active">Movies</a> <!-- Added active class -->
+            <a href="shows.html" class="nav-link">Shows</a>
         </nav>
         <div class="center-logo">
-            <!-- Replace with actual logo if available -->
-            <span class="logo-text">CLONEFLIX</span>
+            <!-- Logo Image -->
+            <img src="data/logo.png" alt="Cloneflix Logo" class="logo-image">
         </div>
         <div class="right-nav">
-            <input type="text" id="search-input" placeholder="Search...">
-            <button id="search-button">🔍</button>
+            <!-- Search Icon -->
+            <span class="material-icons search-icon">search</span>
+            <!-- Add profile icon/link here if needed -->
         </div>
     </header>
 
