@@ -225,7 +225,7 @@
     "title": "Inside",
     "overview": "Stuck in COVID-19 lockdown, US comedian and musician Bo Burnham attempts to stay sane and happy by writing, shooting and performing a one-man comedy special.",
     "poster_path": "/ku1UvTWYvhFQbSesOD6zteY7bXT.jpg",
-    "backdrop_path": "9sfVyE3sP2dkCwDyV7UlYP5TAAR.jpg",
+    "backdrop_path": "/9sfVyE3sP2dkCwDyV7UlYP5TAAR.jpg",
     "vote_average": 8.824,
     "release_date": "2021-07-22",
     "genres": [
@@ -246,5 +246,90 @@
     "custom_trailer_url": "https://www.youtube.com/embed/Bs-GdcUfl0Q",
     "featured": true,
     "new": false
+  },
+  {
+    "id": 153,
+    "title": "Lost in Translation",
+    "overview": "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other's company, away from their lives in America.",
+    "poster_path": "/wkSzJs7oMf8MIr9CQVICsvRfwA7.jpg",
+    "backdrop_path": "/bk3PFxDgIwIb4B2KN64wXWI7nvJ.jpg",
+    "vote_average": 7.424,
+    "release_date": "2003-09-18",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Comedy"
+      },
+      {
+        "id": 878,
+        "name": "Drama"
+      },
+      {
+        "id": 878,
+        "name": "Romance"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "d0XTFAMmhrE",
+    "logo_path": "/g1Lrhd1vwPdggzApgB1JL6Z0LEo.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/nf74gc0dwadrnfgr137rx/Lost-in-Translation.2003.BluRay.720p.x265.HEVC.10bit.Hindi.English.AAC.5.1.ESub-GOPIHD.webm?rlkey=g87ronr6mjr6uc5prvak7mmaa&st=zncn7tjy&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/W6iVPCRflQM",
+    "featured": true,
+    "new": true
+  },
+  {
+    "id": 9900,
+    "title": "Grandma's Boy",
+    "overview": "Even though he's 35, Alex acts more like he's 13, spending his days as the world's oldest video game tester and his evenings developing the next big Xbox game. But when he gets kicked out of his apartment, he's forced to move in with his grandmother.",
+    "poster_path": "/fSRdHBtisU0zhks4OjKezI3jnt7.jpg",
+    "backdrop_path": "/dhoyAlBnKkvDYVNgBEctJjy7U5k.jpg",
+    "vote_average": 5.424,
+    "release_date": "2006-01-06",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Comedy"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "d0XTFAMmhrE",
+    "logo_path": "/4OhhbBsWXGxJEiBW6xLE5VsQ7Hi.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/ackpvzvg55mx0mtmqvdic/grandmas.boy.2006.720p.BrRip.x264.YIFY.webm?rlkey=7e1s1rf7200enszgxqh12ym1t&st=5iql8j7x&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/vsEuOw3ihbs",
+    "featured": true,
+    "new": true
+  },
+  {
+    "id": 856,
+    "title": "Who Framed Roger Rabbit",
+    "overview": "Toon star Roger is worried that his wife Jessica is playing pattycake with someone else, so the studio hires detective Eddie Valiant to snoop on her. But the stakes are quickly raised when Marvin Acme is found dead and Roger is the prime suspect.",
+    "poster_path": "/lYfRc57Kx9VgLZ48iulu0HKnM15.jpg",
+    "backdrop_path": "/tym6NH7ybFeldBuYYp0RSLpjZFq.jpg",
+    "vote_average": 7.424,
+    "release_date": "1988-06-22",
+    "genres": [
+      {
+        "id": 28,
+        "name": "Comedy"
+      },
+      {
+        "id": 28,
+        "name": "Animation"
+      },
+      {
+        "id": 28,
+        "name": "Crime"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "d0XTFAMmhrE",
+    "logo_path": "/8egkIny6W7UAaYXeeCxl6qQ2aVX.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/dfbwm0bj0acxe1bykllzt/Who-Framed-Roger-Rabbit-1080p-Uncensored-Restoration-fiveofseven.webm?rlkey=rl7eca81j4b1hozq2gk1jajkn&st=bozwvybj&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/XEIJpS26aAw",
+    "featured": true,
+    "new": true
   }
 ]
