@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
         if (item.custom_link) {
              detailsPlayButton.style.display = 'inline-block';
              // Set button text (optional, could be an icon)
-             detailsPlayButton.textContent = 'Copy Link'; // Or similar
+             detailsPlayButton.textContent = 'Play'; // Or similar
              detailsPlayButton._listener = (e) => {
                  // Copy the custom_link directly as provided in the JSON
                  const linkToCopy = item.custom_link;
@@ -416,34 +416,23 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
                  titleDisplay = `<img src="${finalCarouselTitleImageUrl}" alt="${title} Logo" class="featured-title-image">`;
             }
 
-            // Use poster_path for the main carousel image (adjust size if needed)
-            let finalCarouselPosterUrl = null;
-            if (item.poster_path) {
-                 if (item.poster_path.startsWith('http')) {
-                     finalCarouselPosterUrl = item.poster_path;
-                 } else {
-                     // Use a larger poster size for the banner if desired, e.g., 'w780' or 'original'
-                     finalCarouselPosterUrl = getImageUrl(item.poster_path, 'w780'); // Example: using w780 size
-                 }
-            }
-            // Use poster as the main visual element
-            const posterElement = finalCarouselPosterUrl
-                ? `<img src="${finalCarouselPosterUrl}" alt="${title} Poster" class="featured-poster" loading="lazy">` // Changed class name
-                : '<div class="featured-poster-placeholder"></div>'; // Changed class name
-
-            // Optional: Still use backdrop as a background image for the banner item itself
+            // Use backdrop_path for the main carousel image (banner)
             let finalCarouselBackdropUrl = null;
-             if (item.backdrop_path) {
+            if (item.backdrop_path) {
                  if (item.backdrop_path.startsWith('http')) {
                      finalCarouselBackdropUrl = item.backdrop_path;
                  } else {
-                     finalCarouselBackdropUrl = getImageUrl(item.backdrop_path, backdropSize);
+                     finalCarouselBackdropUrl = getImageUrl(item.backdrop_path, backdropSize); // Use appropriate backdrop size
                  }
-             }
+            }
+            // Use backdrop as the main visual element
+            const backdropElement = finalCarouselBackdropUrl
+                ? `<img src="${finalCarouselBackdropUrl}" alt="${title} Banner" class="featured-backdrop" loading="lazy">` // Use backdrop class
+                : '<div class="featured-backdrop-placeholder"></div>'; // Use backdrop placeholder class
 
 
             bannerItem.innerHTML = `
-                ${posterElement} {/* Display poster prominently */}
+                ${backdropElement} {/* Display backdrop prominently */}
                 <div class="featured-info">
                     ${titleDisplay}
                     <p class="featured-rating">Rating: ${rating} / 10</p>
@@ -451,14 +440,14 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
                     <button class="play-button-banner" data-item-id="${item.id}">ℹ️ More Info</button>
                  </div>
             `;
-            // Set the backdrop as a background style for the banner item
+            // Set the backdrop as a background style for the banner item (optional, depends on CSS)
              if (finalCarouselBackdropUrl) {
+                 // This sets a CSS variable, your CSS needs to use var(--backdrop-url)
                  bannerItem.style.setProperty('--backdrop-url', `url(${finalCarouselBackdropUrl})`);
-                 // Add a class to apply background styles via CSS if needed
-                 bannerItem.classList.add('has-backdrop-bg');
+                 bannerItem.classList.add('has-backdrop-bg'); // Add class for styling
              } else {
                   bannerItem.style.setProperty('--backdrop-url', 'none');
-                  bannerItem.style.backgroundColor = '#181818'; // Darker fallback background
+                  bannerItem.style.backgroundColor = '#181818'; // Fallback background
              }
 
             featuredItemsContainer.appendChild(bannerItem);
