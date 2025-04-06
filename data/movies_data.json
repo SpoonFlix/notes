@@ -172,7 +172,7 @@
         "name": "Sci-Fi"
       },
       {
-        "id": 12,
+        "id": 18,
         "name": "Adventure"
       },
       {
@@ -199,7 +199,7 @@
     "release_date": "2014-05-02",
     "genres": [
       {
-        "id": 18,
+        "id": 878,
         "name": "Sci-Fi"
       },
       {
@@ -230,7 +230,7 @@
     "release_date": "2021-07-22",
     "genres": [
       {
-        "id": 28,
+        "id": 53,
         "name": "Comedy"
       },
       {
@@ -257,7 +257,7 @@
     "release_date": "2003-09-18",
     "genres": [
       {
-        "id": 28,
+        "id": 53,
         "name": "Comedy"
       },
       {
@@ -288,7 +288,7 @@
     "release_date": "2006-01-06",
     "genres": [
       {
-        "id": 28,
+        "id": 53,
         "name": "Comedy"
       }
     ],
@@ -311,11 +311,11 @@
     "release_date": "1988-06-22",
     "genres": [
       {
-        "id": 28,
+        "id": 53,
         "name": "Comedy"
       },
       {
-        "id": 28,
+        "id": 16,
         "name": "Animation"
       },
       {
