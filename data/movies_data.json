@@ -49,7 +49,7 @@
       },
       {
         "id": 878,
-        "name": "Science Fiction"
+        "name": "Sci-Fi"
       }
     ],
     "type": "movie",
@@ -93,13 +93,13 @@
     "new": false
   },
   {
-    "id": 496243,
-    "title": "Parasite",
-    "overview": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.",
-    "poster_path": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
-    "backdrop_path": "/hiKmpZMGZsrkA3cdce8a7Dpos1j.jpg",
-    "vote_average": 8.501,
-    "release_date": "2019-05-30",
+    "id": 3049,
+    "title": "Ace Ventura: Pet Detective",
+    "overview": "He's Ace Ventura: Pet Detective. Jim Carrey is on the case to find the Miami Dolphins' missing mascot and quarterback Dan Marino. He goes eyeball to eyeball with a man-eating shark, stakes out the Miami Dolphins and woos and wows the ladies. Whether he's undercover, under fire or underwater, he always gets his man… or beast!",
+    "poster_path": "/pqiRuETmuSybfnVZ7qyeoXhQyN1.jpg",
+    "backdrop_path": "/gZ8lCYGbjgF4B4zDaK5MgflgMQY.jpg",
+    "vote_average": 7,
+    "release_date": "1994-02-04",
     "genres": [
       {
         "id": 35,
@@ -107,19 +107,50 @@
       },
       {
         "id": 53,
-        "name": "Thriller"
+        "name": "Mystery"
       },
       {
         "id": 18,
-        "name": "Drama"
+        "name": "Adventure"
       }
     ],
     "type": "movie",
     "trailer_key": "bM9QabAojCg",
-    "logo_path": "/eEGZWCv0OYbMLCaNsDl1cgrvnWR.png",
-    "custom_link": "/watch/parasite-commentary",
-    "title_image_url": "https://image.tmdb.org/t/p/original/5M6zMTBu6TUAAbY3d43XEyQpOMD.png",
-    "custom_trailer_url": null,
+    "logo_path": "/p3I5t39NzMehPrLzsDwrTHtgQ32.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/lkqutakozko0w2pa87800/Ace.Ventura_.Pet.Detective.1994.1080p.BluRay.x264.YIFY.webm?rlkey=ikv8m1pfnh56vnjt7wncdik94&st=bso4g149&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/ZZ1-ajPbMo8",
+    "featured": false,
+    "new": false
+  },
+  {
+    "id": 9273,
+    "title": "Ace Ventura: When Nature Calls",
+    "overview": "Summoned from an ashram in Tibet, Ace finds himself on a perilous journey into the jungles of Africa to find Shikaka, the missing sacred animal of the friendly Wachati tribe. He must accomplish this before the wedding of the Wachati's Princess to the prince of the warrior Wachootoos. If Ace fails, the result will be a vicious tribal war.",
+    "poster_path": "/wcinCf1ov2D6M3P7BBZkzQFOiIb.jpg",
+    "backdrop_path": "/h5Y9T4OoFpMrONhVBZvN2X2DfAB.jpg",
+    "vote_average": 6,
+    "release_date": "1995-11-10",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Comedy"
+      },
+      {
+        "id": 18,
+        "name": "Adventure"
+      }
+    ],
+    "type": "movie",
+    "trailer_key": "bM9QabAojCg",
+    "logo_path": "/sUuCN1A0yRgjQr3x79gGZeANk8G.png",
+    "custom_link": "https://www.dropbox.com/scl/fi/8u91d9qphi5n14z2l6zi3/Ace.Ventura_.When.Nature.Calls.1995.1080p.BluRay.x264.YIFY.webm?rlkey=iu0genx5qf3e0ru63jgsx93lf&st=p7ipb8ab&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/5_gd16-GBp8",
     "featured": false,
     "new": false
   },
