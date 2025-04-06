@@ -383,10 +383,8 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
                         if (!itemsByGenre[genre.name]) {
                             itemsByGenre[genre.name] = [];
                         }
-                        // Avoid adding duplicates to the same genre row if an item somehow got processed twice
-                        if (!itemsByGenre[genre.name].some(existing => existing.id === item.id)) {
-                             itemsByGenre[genre.name].push(item);
-                        }
+                        // Add item to the genre list (removed duplicate ID check for simplicity)
+                        itemsByGenre[genre.name].push(item);
                     }
                 });
             }
