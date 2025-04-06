@@ -24,10 +24,11 @@ body.modal-open > *:not(.movie-details) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 4%; /* Match section padding */
+    padding: 15px 4%; /* Increased padding slightly */
     /* background-color: rgba(20, 20, 20, 0.9); /* Replaced by gradient */
-    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.9) 0%, rgba(20, 20, 20, 0.7) 50%, rgba(20, 20, 20, 0) 100%); /* Gradient background */
-    position: fixed; /* Changed to fixed for consistent gradient */
+    /* Adjusted gradient for more transparency */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    position: fixed; /* Keep fixed */
     top: 0;
     left: 0; /* Added left: 0 */
     right: 0; /* Added right: 0 */
@@ -50,7 +51,7 @@ body.modal-open > *:not(.movie-details) {
 
 /* Style for the logo image */
 .logo-image {
-    height: 35px; /* Adjust height as needed */
+    height: 50px; /* Increased logo height */
     vertical-align: middle; /* Align image nicely with links */
 }
 
@@ -86,7 +87,8 @@ body.modal-open > *:not(.movie-details) {
 
 /* Add padding to body top to prevent content from hiding under fixed header */
 body {
-    padding-top: 80px; /* Adjust based on header height + padding */
+    /* Adjusted padding top slightly based on new header padding */
+    padding-top: 90px;
 }
 
 
