@@ -76,8 +76,7 @@
     "release_date": "1987-09-25",
     "genres": [
       { "name": "Adventure" },
-      { "name": "Fantasy" },
-      { "name": "Romance" },
+      { "name": "Fantasy" }
       { "name": "Family" }
     ],
     "type": "movie",
@@ -119,8 +118,7 @@
     "release_date": "2010-08-13",
     "genres": [
       { "name": "Action" },
-      { "name": "Comedy" },
-      { "name": "Romance" }
+      { "name": "Comedy" }
     ],
     "type": "movie",
     "trailer_key": "",
@@ -251,9 +249,6 @@
     "genres": [
       {
         "name": "Horror"
-      },
-      {
-        "name": "Mystery"
       }
     ],
     "type": "movie",
@@ -334,7 +329,7 @@
     "logo_path": "/19Wq1RAdjt2aAwdKDTGdkqcM8n3.png",
     "custom_link": "https://dl.dropbox.com/scl/fi/rsvxct82w3zp54fzb8fvn/My-Neighbor-Totoro.webm?rlkey=g6u2gtlhz8sahiumf88xzq94t&st=sssl7zav&dl=0",
     "title_image_url": null,
-    "custom_trailer_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/92a7Hj0ijLs",
     "featured": false,
     "new": false
   },{
@@ -418,7 +413,6 @@
     "release_date": "1994-02-04",
     "genres": [
       { "name": "Comedy" },
-      { "name": "Mystery" },
       { "name": "Adventure" }
     ],
     "type": "movie",
@@ -486,8 +480,7 @@
     "genres": [
       { "name": "Action" },
       { "name": "Sci-Fi" },
-      { "name": "Adventure" },
-      { "name": "Marvel" }
+      { "name": "Adventure" }
     ],
     "type": "movie",
     "trailer_key": "cdx31ak4KbQ",
@@ -508,8 +501,7 @@
     "release_date": "2014-05-02",
     "genres": [
       { "name": "Sci-Fi" },
-      { "name": "Action" },
-      { "name": "Marvel" }
+      { "name": "Action" }
     ],
     "type": "movie",
     "trailer_key": "_PZpmTj1Q8Q",
@@ -551,8 +543,7 @@
     "release_date": "2003-09-18",
     "genres": [
       { "name": "Comedy" },
-      { "name": "Drama" },
-      { "name": "Romance" }
+      { "name": "Drama" }
     ],
     "type": "movie",
     "trailer_key": "d0XTFAMmhrE",
