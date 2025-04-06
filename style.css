@@ -154,14 +154,14 @@ body.modal-open > *:not(.movie-details) {
 
 .featured-title-image {
     max-width: 150%;
-    max-height: 200px;
+    max-height: 300px;
     margin-bottom: 15px;
     display: block;
 }
 
 
 .featured-info h2 { /* Fallback text title */
-    margin-top: 0;
+    margin-top: 10px;
     font-size: 3rem;
     margin-bottom: 15px;
 }
