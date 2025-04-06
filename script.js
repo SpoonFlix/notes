@@ -155,9 +155,12 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
         }
         if (item.custom_link) {
              detailsPlayButton.style.display = 'inline-block';
+             // Set button text (optional, could be an icon)
+             detailsPlayButton.textContent = 'Copy Link'; // Or similar
              detailsPlayButton._listener = (e) => {
-                 const fullLink = new URL(item.custom_link, window.location.href).href;
-                 copyToClipboard(fullLink, e.target);
+                 // Copy the custom_link directly as provided in the JSON
+                 const linkToCopy = item.custom_link;
+                 copyToClipboard(linkToCopy, e.target);
              };
              detailsPlayButton.addEventListener('click', detailsPlayButton._listener);
         } else {
