@@ -8,12 +8,12 @@
     <!-- Material Icons Link -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        /* Basic styling for the coming soon message */
+        /* Add some basic styling for the coming soon message */
         .coming-soon {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: calc(100vh - 100px); /* Adjust height considering header */
+            height: calc(100vh - 100px); /* Adjust based on header height */
             font-size: 2rem;
             color: #e5e5e5;
         }
@@ -22,8 +22,8 @@
 <body>
     <header class="main-header">
         <nav class="left-nav">
-            <a href="index.html" class="nav-link" title="Movies"><span class="material-icons">movie</span></a>
-            <a href="shows.html" class="nav-link active" title="Shows"><span class="material-icons">tv</span></a> <!-- Added active class -->
+            <a href="index.html" class="nav-link"><span class="material-icons">movie</span></a> <!-- Replaced text with icon -->
+            <a href="shows.html" class="nav-link active"><span class="material-icons">tv</span></a> <!-- Replaced text with icon, added active class -->
         </nav>
         <div class="center-logo">
             <!-- Logo Image -->
@@ -36,11 +36,39 @@
         </div>
     </header>
 
-    <!-- Coming Soon Message -->
-    <div class="coming-soon">
-        <h1>Coming Soon</h1>
+    <!-- Container for page content -->
+    <div id="page-content">
+        <div class="coming-soon">
+            <h1>Coming Soon</h1>
+        </div>
     </div>
 
-    <!-- Removed script tag and modal HTML -->
+    <!-- Keep the modal structure for potential future use, but it won't be used on this page for now -->
+    <div class="movie-details" style="display: none;">
+        <div class="modal-backdrop">
+             <div class="trailer-container">
+                 <iframe id="details-trailer" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             </div>
+             <button class="close-details">X</button>
+        </div>
+        <div class="modal-info-content">
+             <div class="details-title-container">
+                 <h2 id="details-title"></h2> <!-- Fallback text title -->
+                 <img id="details-title-image" src="" alt="Title Logo" style="display: none;"> <!-- Title Logo Image -->
+             </div>
+             <div class="modal-actions">
+                 <button id="details-play-button" class="play-button-modal" style="display: none;">▶ PLAY</button>
+             </div>
+             <div class="details-metadata">
+                 <span id="details-rating" class="rating"></span>
+                 <span id="details-year"></span>
+                 <span id="details-genres"></span>
+             </div>
+             <p id="details-description"></p>
+        </div>
+    </div>
+
+    <!-- No script needed for "Coming Soon" page, but keep if other global scripts are added later -->
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>
