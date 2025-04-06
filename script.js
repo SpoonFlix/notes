@@ -380,18 +380,23 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
             return;
         }
 
-        // Select up to 7 random movies for the carousel
-        const featuredItemsData = [...movies].sort(() => 0.5 - Math.random()).slice(0, 7);
+        // Filter movies to get only those marked as featured
+        const featuredMovies = movies.filter(movie => movie.featured === true);
 
-        if (featuredItemsData.length === 0) {
+        if (featuredMovies.length === 0) {
+            // Optionally, fallback to random movies if none are explicitly featured
+            // featuredMovies = [...movies].sort(() => 0.5 - Math.random()).slice(0, 7);
+            // Or just hide the carousel if no featured movies are set
+            console.log("No movies marked as featured. Hiding carousel.");
             featuredCarousel.style.display = 'none';
             return;
         }
+
          featuredCarousel.style.display = 'block'; // Ensure it's visible
         featuredItemsContainer.innerHTML = ''; // Clear previous items
         currentFeaturedIndex = 0; // Reset index
 
-        featuredItemsData.forEach((item, index) => {
+        featuredMovies.forEach((item, index) => {
             const bannerItem = document.createElement('div');
             bannerItem.classList.add('featured-item');
             if (index === 0) bannerItem.classList.add('active');
@@ -411,22 +416,34 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
                  titleDisplay = `<img src="${finalCarouselTitleImageUrl}" alt="${title} Logo" class="featured-title-image">`;
             }
 
+            // Use poster_path for the main carousel image (adjust size if needed)
+            let finalCarouselPosterUrl = null;
+            if (item.poster_path) {
+                 if (item.poster_path.startsWith('http')) {
+                     finalCarouselPosterUrl = item.poster_path;
+                 } else {
+                     // Use a larger poster size for the banner if desired, e.g., 'w780' or 'original'
+                     finalCarouselPosterUrl = getImageUrl(item.poster_path, 'w780'); // Example: using w780 size
+                 }
+            }
+            // Use poster as the main visual element
+            const posterElement = finalCarouselPosterUrl
+                ? `<img src="${finalCarouselPosterUrl}" alt="${title} Poster" class="featured-poster" loading="lazy">` // Changed class name
+                : '<div class="featured-poster-placeholder"></div>'; // Changed class name
 
-            // Use backdrop_path for carousel backdrop
+            // Optional: Still use backdrop as a background image for the banner item itself
             let finalCarouselBackdropUrl = null;
-            if (item.backdrop_path) {
+             if (item.backdrop_path) {
                  if (item.backdrop_path.startsWith('http')) {
                      finalCarouselBackdropUrl = item.backdrop_path;
                  } else {
                      finalCarouselBackdropUrl = getImageUrl(item.backdrop_path, backdropSize);
                  }
-            }
-            const backdropElement = finalCarouselBackdropUrl
-                ? `<img src="${finalCarouselBackdropUrl}" alt="${title} Banner" class="featured-backdrop" loading="lazy">`
-                : '<div class="featured-backdrop-placeholder"></div>';
+             }
+
 
             bannerItem.innerHTML = `
-                ${backdropElement}
+                ${posterElement} {/* Display poster prominently */}
                 <div class="featured-info">
                     ${titleDisplay}
                     <p class="featured-rating">Rating: ${rating} / 10</p>
@@ -434,14 +451,14 @@ document.addEventListener('DOMContentLoaded', async () => { // Make top-level as
                     <button class="play-button-banner" data-item-id="${item.id}">ℹ️ More Info</button>
                  </div>
             `;
-            // Add background only if backdrop exists
-             if (finalCarouselBackdropUrl && bannerItem.querySelector('.featured-backdrop')) {
-                 bannerItem.querySelector('.featured-backdrop').addEventListener('load', () => {
-                     bannerItem.style.setProperty('--backdrop-url', `url(${finalCarouselBackdropUrl})`);
-                 });
+            // Set the backdrop as a background style for the banner item
+             if (finalCarouselBackdropUrl) {
+                 bannerItem.style.setProperty('--backdrop-url', `url(${finalCarouselBackdropUrl})`);
+                 // Add a class to apply background styles via CSS if needed
+                 bannerItem.classList.add('has-backdrop-bg');
              } else {
-                  bannerItem.style.setProperty('--backdrop-url', 'none'); // Or a default gradient/color
-                  bannerItem.style.backgroundColor = '#222'; // Fallback background
+                  bannerItem.style.setProperty('--backdrop-url', 'none');
+                  bannerItem.style.backgroundColor = '#181818'; // Darker fallback background
              }
 
             featuredItemsContainer.appendChild(bannerItem);

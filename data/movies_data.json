@@ -26,7 +26,8 @@
     "logo_path": "/hkUi1Z15Ymj9GNamWQkzUhehLuy.png",
     "custom_link": "https://dl.dropbox.com/scl/fi/ntvyyi2ofqg3cgtbh7txe/Spirited-Away.webm?rlkey=qjozxx3jlv3a6hhahl7i9qplm&st=gih69454&dl=0",
     "title_image_url": null,
-    "custom_trailer_url": "https://www.youtube.com/watch?v=fDUFP7EeXLE"
+    "custom_trailer_url": null,
+    "featured": false
   },
   {
     "id": 157336,
@@ -55,7 +56,8 @@
     "logo_path": "/5yWlWp7Obmfn6ztpf1408JJ6L7o.png",
     "custom_link": "https://dl.dropbox.com/scl/fi/yoi7txd2p4g2645yyoyyf/interstellar.webm?rlkey=th74l3qm4xkizma66ut22j5m2&st=zgcyhw2h&dl=0",
     "title_image_url": null,
-    "custom_trailer_url": null
+    "custom_trailer_url": null,
+    "featured": false
   },
   {
     "id": 496243,
@@ -84,7 +86,8 @@
     "logo_path": "/eEGZWCv0OYbMLCaNsDl1cgrvnWR.png",
     "custom_link": "/watch/parasite-commentary",
     "title_image_url": "https://image.tmdb.org/t/p/original/5M6zMTBu6TUAAbY3d43XEyQpOMD.png",
-    "custom_trailer_url": null
+    "custom_trailer_url": null,
+    "featured": false
   },
   {
     "id": 27205,
@@ -113,7 +116,8 @@
     "logo_path": "/8ThUfwQKqcNk6fTOVaWOts3kvku.png",
     "custom_link": "/watch/inception-custom",
     "title_image_url": "https://image.tmdb.org/t/p/original/8ZTVqvKDQ8emSGUEMjsSzoWviJ7.png",
-    "custom_trailer_url": "https://www.youtube.com/embed/8hP9D6kZseM"
+    "custom_trailer_url": "https://www.youtube.com/embed/8hP9D6kZseM",
+    "featured": false
   },
   {
     "id": 155,
@@ -146,7 +150,8 @@
     "logo_path": "/nO5Uix3Qr4WjOyU1BMPv0okyNWm.png",
     "custom_link": "/watch/dark-knight-imax",
     "title_image_url": "https://image.tmdb.org/t/p/original/ldfNeTvQ4QcOMtE4F8qUAbdrS4A.png",
-    "custom_trailer_url": null
+    "custom_trailer_url": null,
+    "featured": false
   },
   {
     "id": 603,
@@ -171,6 +176,7 @@
     "logo_path": "/kA8phmxG7h4BIN061fiutckq9Ho.png",
     "custom_link": "/watch/matrix-special",
     "title_image_url": "https://image.tmdb.org/t/p/original/dUPKMhCOznGgcX1k4dVrA3f05sI.png",
-    "custom_trailer_url": null
+    "custom_trailer_url": null,
+    "featured": false
   }
 ]

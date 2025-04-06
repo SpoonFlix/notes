@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "id": 1396,
+    "name": "Breaking Bad",
+    "overview": "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
+    "poster_path": "/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg",
+    "backdrop_path": "/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg",
+    "vote_average": 8.9,
+    "first_air_date": "2008-01-20",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+         "id": 80,
+         "name": "Crime"
+      }
+    ],
+    "type": "show",
+    "trailer_key": "HhesaQXLuRY",
+    "logo_path": "/1Jaj7sFi3E00JFkm3RjSseYf2m.png",
+    "custom_link": null,
+    "title_image_url": null,
+    "custom_trailer_url": null,
+    "featured": false
+  },
+  {
+    "id": 71446,
+    "name": "Money Heist",
+    "overview": "To carry out the biggest heist in history, a mysterious man called The Professor recruits a band of eight robbers who have a single characteristic: none of them has anything to lose. Five months of seclusion - memorizing every step, every detail, every probability - culminate in eleven days locked up in the National Coinage and Stamp Factory of Spain, surrounded by police forces and with dozens of hostages in their power, to find out whether their suicide wager will lead to everything or nothing.",
+    "poster_path": "/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
+    "backdrop_path": "/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg",
+    "vote_average": 8.3,
+    "first_air_date": "2017-05-02",
+    "genres": [
+       {
+         "id": 80,
+         "name": "Crime"
+       },
+       {
+         "id": 18,
+         "name": "Drama"
+       }
+    ],
+    "type": "show",
+    "trailer_key": "fvCdLmxnJ0o",
+    "logo_path": "/ifhbNuuVxlK1JC3QlcOTeH5J7L.png",
+    "custom_link": null,
+    "title_image_url": null,
+    "custom_trailer_url": null,
+    "featured": false
+  }
+]
