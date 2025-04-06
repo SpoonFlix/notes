@@ -155,13 +155,13 @@
     "new": false
   },
   {
-    "id": 27205,
-    "title": "Inception",
-    "overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious.",
-    "poster_path": "/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg",
-    "backdrop_path": "/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
+    "id": 1930,
+    "title": "The Amazing Spider-Man",
+    "overview": "Peter Parker is an outcast high schooler abandoned by his parents as a boy, leaving him to be raised by his Uncle Ben and Aunt May. Like most teenagers, Peter is trying to figure out who he is and how he got to be the person he is today. As Peter discovers a mysterious briefcase that belonged to his father, he begins a quest to understand his parents' disappearance – leading him directly to Oscorp and the lab of Dr. Curt Connors, his father's former partner. As Spider-Man is set on a collision course with Connors' alter ego, The Lizard, Peter will make life-altering choices to use his powers and shape his destiny to become a hero.",
+    "poster_path": "/jexoNYnPd6vVrmygwF6QZmWPFdu.jpg",
+    "backdrop_path": "/9RJYNytdtSC9N8eAQ41zxV1XHCo.jpg",
     "vote_average": 8.369,
-    "release_date": "2010-07-15",
+    "release_date": "2012-07-03",
     "genres": [
       {
         "id": 28,
@@ -169,34 +169,38 @@
       },
       {
         "id": 878,
-        "name": "Science Fiction"
+        "name": "Sci-Fi"
       },
       {
         "id": 12,
         "name": "Adventure"
+      },
+      {
+        "id": 80,
+        "name": "Marvel"
       }
     ],
     "type": "movie",
     "trailer_key": "cdx31ak4KbQ",
-    "logo_path": "/8ThUfwQKqcNk6fTOVaWOts3kvku.png",
-    "custom_link": "/watch/inception-custom",
-    "title_image_url": "https://image.tmdb.org/t/p/original/8ZTVqvKDQ8emSGUEMjsSzoWviJ7.png",
-    "custom_trailer_url": "https://www.youtube.com/embed/8hP9D6kZseM",
+    "logo_path": "/wpjoFEW3fl7NYJNrBW2b1NicW2V.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/3hccwfvl71avbv8603iy2/Amazing-Spiderman-1.webm?rlkey=2jdrr1od26v4pw9ayt72fxofm&st=yt33eagd&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/upwf8RsyNqQ",
     "featured": false,
     "new": false
   },
   {
-    "id": 155,
-    "title": "The Dark Knight",
-    "overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
-    "poster_path": "/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
-    "backdrop_path": "/oOv2oUXcAaNXakRqUPxYq5lJURz.jpg",
-    "vote_average": 8.519,
-    "release_date": "2008-07-16",
+    "id": 102382,
+    "title": "The Amazing Spider-Man 2",
+    "overview": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen’s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past.",
+    "poster_path": "/dGjoPttcbKR5VWg1jQuNFB247KL.jpg",
+    "backdrop_path": "/8hWJMoJhGjxAgsRt7YRem96Qbae.jpg",
+    "vote_average": 7.519,
+    "release_date": "2014-05-02",
     "genres": [
       {
         "id": 18,
-        "name": "Drama"
+        "name": "Sci-Fi"
       },
       {
         "id": 28,
@@ -204,47 +208,43 @@
       },
       {
         "id": 80,
-        "name": "Crime"
-      },
-      {
-        "id": 53,
-        "name": "Thriller"
+        "name": "Marvel"
       }
     ],
     "type": "movie",
     "trailer_key": "_PZpmTj1Q8Q",
-    "logo_path": "/nO5Uix3Qr4WjOyU1BMPv0okyNWm.png",
-    "custom_link": "/watch/dark-knight-imax",
-    "title_image_url": "https://image.tmdb.org/t/p/original/ldfNeTvQ4QcOMtE4F8qUAbdrS4A.png",
-    "custom_trailer_url": null,
+    "logo_path": "/lwu3nEfEh40SSE4akFmRfm5qwQD.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/oy2va6efkmkix2dvilgk0/Amazing-Spiderman-2.webm?rlkey=2d5muickdjtjs1pg6332608zz&st=b19nbgl1&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/nbp3Ra3Yp74",
     "featured": false,
     "new": false
   },
   {
-    "id": 603,
-    "title": "The Matrix",
-    "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
-    "poster_path": "/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
-    "backdrop_path": "/icmmSD4vTTDKOq2vvdulafOGw93.jpg",
-    "vote_average": 8.224,
-    "release_date": "1999-03-31",
+    "id": 823754,
+    "title": "Inside",
+    "overview": "Stuck in COVID-19 lockdown, US comedian and musician Bo Burnham attempts to stay sane and happy by writing, shooting and performing a one-man comedy special.",
+    "poster_path": "/ku1UvTWYvhFQbSesOD6zteY7bXT.jpg",
+    "backdrop_path": "9sfVyE3sP2dkCwDyV7UlYP5TAAR.jpg",
+    "vote_average": 8.824,
+    "release_date": "2021-07-22",
     "genres": [
       {
         "id": 28,
-        "name": "Action"
+        "name": "Comedy"
       },
       {
         "id": 878,
-        "name": "Science Fiction"
+        "name": "Drama"
       }
     ],
     "type": "movie",
     "trailer_key": "d0XTFAMmhrE",
-    "logo_path": "/kA8phmxG7h4BIN061fiutckq9Ho.png",
-    "custom_link": "/watch/matrix-special",
-    "title_image_url": "https://image.tmdb.org/t/p/original/dUPKMhCOznGgcX1k4dVrA3f05sI.png",
-    "custom_trailer_url": null,
-    "featured": false,
+    "logo_path": "/812INBGmPAFZ01pmt9ooGYYRZnG.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/vjj0qd7qov7ol6ew8o833/Bo-Burnham-Inside.webm?rlkey=flrru0c7muh6oakcjmik4k0xr&st=c1lmi6rc&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/Bs-GdcUfl0Q",
+    "featured": true,
     "new": false
   }
 ]
