@@ -62,13 +62,13 @@
     "new": false
   },
   {
-    "id": 157336,
-    "title": "Interstellar",
+    "id": 578,
+    "title": "Jaws",
     "overview": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
     "poster_path": "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
     "backdrop_path": "/8sNiAPPYU14PUepFNeSNGUTiHW.jpg",
     "vote_average": 8.453,
-    "release_date": "2014-11-05",
+    "release_date": "1975-20-06",
     "genres": [
       {
         "id": 12,
@@ -76,19 +76,19 @@
       },
       {
         "id": 18,
-        "name": "Drama"
+        "name": "Horror"
       },
       {
         "id": 878,
-        "name": "Science Fiction"
+        "name": "Thriller"
       }
     ],
-    "type": "show",
+    "type": "movie",
     "trailer_key": "LY19rHKAaAg",
-    "logo_path": "/5yWlWp7Obmfn6ztpf1408JJ6L7o.png",
-    "custom_link": "https://dl.dropbox.com/scl/fi/yoi7txd2p4g2645yyoyyf/interstellar.webm?rlkey=th74l3qm4xkizma66ut22j5m2&st=zgcyhw2h&dl=0",
+    "logo_path": "/lxM6kqilAdpdhqUl2biYp5frUxE.jpg",
+    "custom_link": "https://dl.dropbox.com/scl/fi/8oh8w4fo6ijwwn27gy5fb/Jaws.webm?rlkey=awnekkui9ddocuq4a2y9w6gv5&st=etw8798f&dl=0",
     "title_image_url": null,
-    "custom_trailer_url": null,
+    "custom_trailer_url": "https://www.youtube.com/watch?v=BU_j7fyBF-A",
     "featured": true,
     "new": false
   },
