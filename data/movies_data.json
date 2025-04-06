@@ -26,8 +26,8 @@
     "logo_path": "/hkUi1Z15Ymj9GNamWQkzUhehLuy.png",
     "custom_link": "https://dl.dropbox.com/scl/fi/ntvyyi2ofqg3cgtbh7txe/Spirited-Away.webm?rlkey=qjozxx3jlv3a6hhahl7i9qplm&st=gih69454&dl=0",
     "title_image_url": null,
-    "custom_trailer_url": null,
-    "featured": false
+    "custom_trailer_url": "https://www.youtube.com/embed/fDUFP7EeXLE",
+    "featured": true
   },
   {
     "id": 157336,
@@ -57,7 +57,7 @@
     "custom_link": "https://dl.dropbox.com/scl/fi/yoi7txd2p4g2645yyoyyf/interstellar.webm?rlkey=th74l3qm4xkizma66ut22j5m2&st=zgcyhw2h&dl=0",
     "title_image_url": null,
     "custom_trailer_url": null,
-    "featured": false
+    "featured": true
   },
   {
     "id": 496243,
