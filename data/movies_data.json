@@ -8,15 +8,9 @@
     "vote_average": 8.536,
     "release_date": "2001-07-20",
     "genres": [
-      {
-        "name": "Animation"
-      },
-      {
-        "name": "Family"
-      },
-      {
-        "name": "Fantasy"
-      }
+      { "name": "Animation" },
+      { "name": "Family" },
+      { "name": "Fantasy" }
     ],
     "type": "movie",
     "trailer_key": "GAp2_0JJskk",
@@ -26,7 +20,8 @@
     "custom_trailer_url": "https://www.youtube.com/embed/fDUFP7EeXLE",
     "featured": true,
     "new": false
-  },{
+  },
+  {
     "id": 16340,
     "title": "Rugrats in Paris: The Movie",
     "overview": "A group of rambunctious toddlers travel a trip to Paris. As they journey from the Eiffel Tower to Notre Dame, they learn new lessons about trust, loyalty and love.",
@@ -35,15 +30,9 @@
     "vote_average": 6.6,
     "release_date": "2000-11-17",
     "genres": [
-      {
-        "name": "Animation"
-      },
-      {
-        "name": "Family"
-      },
-      {
-        "name": "Comedy"
-      }
+      { "name": "Animation" },
+      { "name": "Family" },
+      { "name": "Comedy" }
     ],
     "type": "movie",
     "trailer_key": "",
@@ -63,18 +52,10 @@
     "vote_average": 6.3,
     "release_date": "2003-06-13",
     "genres": [
-      {
-        "name": "Animation"
-      },
-      {
-        "name": "Family"
-      },
-      {
-        "name": "Adventure"
-      },
-      {
-        "name": "Comedy"
-      }
+      { "name": "Animation" },
+      { "name": "Family" },
+      { "name": "Adventure" },
+      { "name": "Comedy" }
     ],
     "type": "movie",
     "trailer_key": "",
@@ -94,18 +75,21 @@
     "vote_average": 8,
     "release_date": "1987-09-25",
     "genres": [
-      {
-        "name": "Adventure"
-      },
-      {
-        "name": "Fantasy"
-      },
-      {
-        "name": "Romance"
-      },
-      {
-        "name": "Family"
-      },
+      { "name": "Adventure" },
+      { "name": "Fantasy" },
+      { "name": "Romance" },
+      { "name": "Family" }
+    ],
+    "type": "movie",
+    "trailer_key": "",
+    "logo_path": "/dOxe2Jeyol7u9pUDqd4iVq2KLIV.png",
+    "custom_link": "https://dl.dropbox.com/scl/fi/0bdrkncu2v2wm2qx45f4o/The.Princess.Bride.1987.REMASTERED.720p.BluRay.999MB.HQ.x265.10bit-GalaxyRG.webm?rlkey=bzzupijqexr3js3xefqzajopk&st=rjkbdcid&dl=0",
+    "title_image_url": null,
+    "custom_trailer_url": "https://www.youtube.com/embed/Nq30P5tEY0I",
+    "featured": false,
+    "new": true
+  },
+  {
     "id": 1022690,
     "title": "Ricky Stanicky",
     "overview": "When three childhood best friends pull a prank gone wrong, they invent the imaginary Ricky Stanicky to get them out of trouble. Twenty years later, the trio still uses the nonexistent Ricky as a handy alibi for their immature behavior. But when their spouses and partners get suspicious and demand to finally meet the fabled Mr. Stanicky, the guilty trio decide to hire a washed-up actor and raunchy celebrity impersonator to bring him to life.",
@@ -114,9 +98,7 @@
     "vote_average": 7.1,
     "release_date": "2024-02-21",
     "genres": [
-      {
-        "name": "Comedy"
-      }
+      { "name": "Comedy" }
     ],
     "type": "movie",
     "trailer_key": "",
@@ -136,15 +118,9 @@
     "vote_average": 7.8,
     "release_date": "2010-08-13",
     "genres": [
-      {
-        "name": "Action"
-      },
-      {
-        "name": "Comedy"
-      },
-      {
-        "name": "Romance"
-      }
+      { "name": "Action" },
+      { "name": "Comedy" },
+      { "name": "Romance" }
     ],
     "type": "movie",
     "trailer_key": "",
@@ -153,16 +129,6 @@
     "title_image_url": null,
     "custom_trailer_url": null,
     "featured": true,
-    "new": true
-  },
-    ],
-    "type": "movie",
-    "trailer_key": "",
-    "logo_path": "/dOxe2Jeyol7u9pUDqd4iVq2KLIV.png",
-    "custom_link": "https://dl.dropbox.com/scl/fi/0bdrkncu2v2wm2qx45f4o/The.Princess.Bride.1987.REMASTERED.720p.BluRay.999MB.HQ.x265.10bit-GalaxyRG.webm?rlkey=bzzupijqexr3js3xefqzajopk&st=rjkbdcid&dl=0",
-    "title_image_url": null,
-    "custom_trailer_url": "https://www.youtube.com/embed/Nq30P5tEY0I",
-    "featured": false,
     "new": true
   },
   {
@@ -174,12 +140,8 @@
     "vote_average": 6.8,
     "release_date": "2004-06-11",
     "genres": [
-      {
-        "name": "Comedy"
-      },
-      {
-        "name": "Family"
-      }
+      { "name": "Comedy" },
+      { "name": "Family" }
     ],
     "type": "movie",
     "trailer_key": "",
@@ -199,12 +161,8 @@
     "vote_average": 6.8,
     "release_date": "1987-06-20",
     "genres": [
-      {
-        "name": "Sci-Fi"
-      },
-      {
-        "name": "Comedy"
-      }
+      { "name": "Sci-Fi" },
+      { "name": "Comedy" }
     ],
     "type": "movie",
     "trailer_key": "",
@@ -224,15 +182,9 @@
     "vote_average": 8.453,
     "release_date": "2014-11-05",
     "genres": [
-      {
-        "name": "Adventure"
-      },
-      {
-        "name": "Drama"
-      },
-      {
-        "name": "Sci-Fi"
-      }
+      { "name": "Adventure" },
+      { "name": "Drama" },
+      { "name": "Sci-Fi" }
     ],
     "type": "movie",
     "trailer_key": "LY19rHKAaAg",
@@ -252,15 +204,9 @@
     "vote_average": 8.453,
     "release_date": "1975-20-06",
     "genres": [
-      {
-        "name": "Adventure"
-      },
-      {
-        "name": "Horror"
-      },
-      {
-        "name": "Thriller"
-      }
+      { "name": "Adventure" },
+      { "name": "Horror" },
+      { "name": "Thriller" }
     ],
     "type": "movie",
     "trailer_key": "LY19rHKAaAgg",
@@ -280,15 +226,9 @@
     "vote_average": 7,
     "release_date": "1994-02-04",
     "genres": [
-      {
-        "name": "Comedy"
-      },
-      {
-        "name": "Mystery"
-      },
-      {
-        "name": "Adventure"
-      }
+      { "name": "Comedy" },
+      { "name": "Mystery" },
+      { "name": "Adventure" }
     ],
     "type": "movie",
     "trailer_key": "bM9QabAojCg",
@@ -308,15 +248,9 @@
     "vote_average": 6,
     "release_date": "1995-11-10",
     "genres": [
-      {
-        "name": "Crime"
-      },
-      {
-        "name": "Comedy"
-      },
-      {
-        "name": "Adventure"
-      }
+      { "name": "Crime" },
+      { "name": "Comedy" },
+      { "name": "Adventure" }
     ],
     "type": "movie",
     "trailer_key": "bM9QabAojCg",
@@ -336,18 +270,10 @@
     "vote_average": 8.369,
     "release_date": "2012-07-03",
     "genres": [
-      {
-        "name": "Action"
-      },
-      {
-        "name": "Sci-Fi"
-      },
-      {
-        "name": "Adventure"
-      },
-      {
-        "name": "Marvel"
-      }
+      { "name": "Action" },
+      { "name": "Sci-Fi" },
+      { "name": "Adventure" },
+      { "name": "Marvel" }
     ],
     "type": "movie",
     "trailer_key": "cdx31ak4KbQ",
@@ -367,15 +293,9 @@
     "vote_average": 7.519,
     "release_date": "2014-05-02",
     "genres": [
-      {
-        "name": "Sci-Fi"
-      },
-      {
-        "name": "Action"
-      },
-      {
-        "name": "Marvel"
-      }
+      { "name": "Sci-Fi" },
+      { "name": "Action" },
+      { "name": "Marvel" }
     ],
     "type": "movie",
     "trailer_key": "_PZpmTj1Q8Q",
@@ -395,12 +315,8 @@
     "vote_average": 8.824,
     "release_date": "2021-07-22",
     "genres": [
-      {
-        "name": "Comedy"
-      },
-      {
-        "name": "Drama"
-      }
+      { "name": "Comedy" },
+      { "name": "Drama" }
     ],
     "type": "movie",
     "trailer_key": "d0XTFAMmhrE",
@@ -420,15 +336,9 @@
     "vote_average": 7.424,
     "release_date": "2003-09-18",
     "genres": [
-      {
-        "name": "Comedy"
-      },
-      {
-        "name": "Drama"
-      },
-      {
-        "name": "Romance"
-      }
+      { "name": "Comedy" },
+      { "name": "Drama" },
+      { "name": "Romance" }
     ],
     "type": "movie",
     "trailer_key": "d0XTFAMmhrE",
@@ -448,12 +358,8 @@
     "vote_average": 5.424,
     "release_date": "2006-01-06",
     "genres": [
-      {
-        "name": "Comedy"
-      },
-      {
-        "name": "Drama"
-      }
+      { "name": "Comedy" },
+      { "name": "Drama" }
     ],
     "type": "movie",
     "trailer_key": "d0XTFAMmhrE",
@@ -473,15 +379,9 @@
     "vote_average": 7.424,
     "release_date": "1988-06-22",
     "genres": [
-      {
-        "name": "Comedy"
-      },
-      {
-        "name": "Animation"
-      },
-      {
-        "name": "Crime"
-      }
+      { "name": "Comedy" },
+      { "name": "Animation" },
+      { "name": "Crime" }
     ],
     "type": "movie",
     "trailer_key": "d0XTFAMmhrE",
