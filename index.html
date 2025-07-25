@@ -27,7 +27,8 @@
       border-radius: 32px;
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       padding: 32px 32px 12px 32px;
-      width: 480px;
+      min-width: 550px;
+      width: clamp(550px, 60vw, 480px);
       max-width: 96vw;
       position: relative;
       animation: fadeIn 0.7s;
@@ -187,10 +188,35 @@
       box-shadow: 0 0 0 2px #a5b4fc44;
       border-color: #6366f1;
     }
+    .input-icon-group label {
+      margin-bottom: 2px;
+      font-weight: 600;
+      color: #a5b4fc;
+      letter-spacing: 0.5px;
+      font-size: 0.98em;
+    }
+    .input-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #3b82f6;
+      opacity: 0.8;
+      font-size: 1.1em;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .input-icon-group input {
+      padding-left: 38px !important;
+    }
+    .input-icon-group > div {
+      position: relative;
+    }
     @media (max-width: 600px) {
       .container {
-        padding: 10px 2px 10px 2px;
+        min-width: unset;
         width: 99vw;
+        padding: 10px 2px 10px 2px;
       }
       h1 {
         font-size: 1em;
@@ -199,37 +225,96 @@
         min-height: 120px;
       }
     }
+    .input-icon-group select {
+      padding-left: 44px !important;
+      padding-right: 38px !important;
+      background: rgba(255,255,255,0.55);
+      color: #1b2532;
+      border: none;
+      font-size: 0.98em;
+      margin-bottom: 4px;
+      box-sizing: border-box;
+      border-radius: 18px !important;
+      box-shadow: 0 1px 6px #0001;
+      border: 1.5px solid rgba(60,60,100,0.08);
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+    .input-icon-group select:focus {
+      box-shadow: 0 0 0 2px #3b82f6, 0 1px 6px #0001;
+      border: 1.5px solid #3b82f6;
+      background: rgba(255,255,255,0.85);
+      color: #181f2a;
+    }
+    .input-select-arrow {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #3b82f6;
+      opacity: 0.7;
+      font-size: 1em;
+      pointer-events: none;
+      z-index: 2;
+    }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <div class="container">
     <form id="noteForm" autocomplete="off">
       <div class="field-group">
-        <div style="flex:1;min-width:0;">
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" required>
+        <div class="input-icon-group" style="flex:1;min-width:0;">
+          <label for="name"><span>Full Name</span></label>
+          <div style="position:relative;">
+            <i class="fa-solid fa-user input-icon"></i>
+            <input type="text" id="name" required placeholder="John Doe">
+          </div>
         </div>
-        <div style="flex:1;min-width:0;">
-          <label for="contact">Contact Number:</label>
-          <input type="text" id="contact" required>
+        <div class="input-icon-group" style="flex:1;min-width:0;">
+          <label for="contact"><span>Contact Number</span></label>
+          <div style="position:relative;">
+            <i class="fa-solid fa-phone input-icon"></i>
+            <input type="text" id="contact" required placeholder="(555) 555-5555">
+          </div>
         </div>
       </div>
-      <label for="confirmation">Confirmation Number:</label>
-      <input type="text" id="confirmation" required>
-
-      <label for="reason">Reason for Call:</label>
-      <select id="reason">
-        <option>Modify Reservation</option>
-        <option>Too Late to Cancel</option>
-        <option>Request Receipt</option>
-        <option>Hotel Complaint</option>
-      </select>
-
-      <label for="hotelResponse">Response:</label>
-      <input type="text" id="hotelResponse" placeholder="Optional">
-
-      <label for="hotelContact">Hotel Contact:</label>
-      <input type="text" id="hotelContact" placeholder="e.g. Manager Bill">
+      <div class="input-icon-group">
+        <label for="confirmation"><span>Confirmation Number</span></label>
+        <div style="position:relative;">
+          <i class="fa-solid fa-hashtag input-icon"></i>
+          <input type="text" id="confirmation" required placeholder="73734552">
+        </div>
+      </div>
+      <div class="input-icon-group">
+        <label for="reason"><span>Reason for Call</span></label>
+        <div style="position:relative;">
+          <i class="fa-solid fa-list input-icon"></i>
+          <select id="reason" style="padding-left:44px; appearance:none; background:rgba(255,255,255,0.55);">
+            <option disabled selected value="">Select a reason...</option>
+            <option>Modify Reservation</option>
+            <option>Too Late to Cancel</option>
+            <option>Request Receipt</option>
+            <option>Hotel Complaint</option>
+          </select>
+          <i class="fa-solid fa-chevron-down input-select-arrow" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#3b82f6;opacity:0.7;font-size:1em;pointer-events:none;"></i>
+        </div>
+      </div>
+      <div class="input-icon-group">
+        <label for="hotelResponse"><span>Response</span></label>
+        <div style="position:relative;">
+          <i class="fa-solid fa-comment-dots input-icon"></i>
+          <input type="text" id="hotelResponse" placeholder="Tip: Press Enter to add multiple responses">
+        </div>
+      </div>
+      <div class="input-icon-group">
+        <label for="hotelContact"><span>Hotel Contact</span></label>
+        <div style="position:relative;">
+          <i class="fa-solid fa-user-tie input-icon"></i>
+          <input type="text" id="hotelContact" placeholder="Manager Bill">
+        </div>
+      </div>
       <div style="margin: 6px 0 0 0; display: flex; align-items: center; gap: 8px; justify-content: center;">
         <input type="checkbox" id="hotelUnreachable" style="width:16px;height:16px;">
         <label for="hotelUnreachable" style="margin:0;font-weight:400;font-size:0.97em;cursor:pointer;">Could not reach hotel</label>
@@ -253,6 +338,29 @@
     const noteArea = document.getElementById('note');
     const copyBtn = document.getElementById('copyBtn');
 
+    // Store multiple responses
+    let responseLines = [];
+
+    hotelResponseInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const val = hotelResponseInput.value.trim();
+        if (val) {
+          responseLines.push(val);
+          hotelResponseInput.value = '';
+          hotelResponseInput.style.outline = '2.5px solid #22c55e';
+          setTimeout(() => {
+            hotelResponseInput.style.outline = '';
+          }, 400);
+          updateNote();
+        }
+      }
+    });
+
+    hotelResponseInput.addEventListener('input', function() {
+      updateNote();
+    });
+
     function getHotelContactLine() {
       const contact = hotelContactInput.value.trim();
       const unreachable = hotelUnreachableCheckbox.checked;
@@ -265,32 +373,41 @@
       }
     }
 
-    function getBottomTemplate(reason, hotelResponse) {
-      let responseLine = hotelResponse ? `– Hotel advised that ${hotelResponse}\n` : '';
-      let modifyLine = hotelResponse ? `– ${hotelResponse}\n` : '';
-      let complaintLine = hotelResponse ? `– ${hotelResponse}\n` : '';
+    function getBottomTemplate(reason, _hotelResponse, name) {
+      // Always include all entered lines plus the current field value (if not empty)
+      let allResponses = responseLines.slice();
+      if (hotelResponseInput.value.trim()) {
+        allResponses.push(hotelResponseInput.value.trim());
+      }
+      let responseLine = allResponses.length ? allResponses.map(r => `– ${r}\n`).join('') : '';
+      let modifyLine = responseLine;
+      let complaintLine = responseLine || '– Documented complaint details\n';
       const hotelContactLine = getHotelContactLine();
+      const hasHotelContact = hotelContactInput.value.trim() || hotelUnreachableCheckbox.checked;
       const templates = {
         "Too Late to Cancel":
-          `– Guest called and stated that they needed to cancel a reservation\n– Guest provided confirmation number and reservation was verified\n– Advised Guest that reservation was listed as too late to cancel and explain policy\n– Gave sorry/empathy statement\n${hotelContactLine}${responseLine}– Advised Guest of above\n– Provided Guest CR ticket number\n– Sent to member web for hotel records\n– Closed ticket`,
+          `– ${name} called and stated that they needed to cancel a reservation\n– ${name} provided confirmation number and reservation was verified\n– Advised ${name} that reservation was listed as too late to cancel and explain policy\n– Gave sorry/empathy statement\n${hotelContactLine}${responseLine}– Advised ${name} of above\n– Provided ${name} CR ticket number\n– Sent to member web for hotel records\n– Closed ticket`,
         "Modify Reservation":
-          `– Guest called to modify reservation\n– Provided confirmation number and verified reservation\n– Explained modification/cancellation policy\n${hotelContactLine}${modifyLine}– Advised Guest accordingly\n– Provided CR ticket number\n– Closed ticket`,
+          `– ${name} called to modify reservation\n– Provided confirmation number and verified reservation\n– Explained modification/cancellation policy\n${hotelContactLine}${modifyLine}– Advised ${name} accordingly\n– Provided CR ticket number\n– Closed ticket`,
         "Request Receipt":
-          "– Guest requested receipt for stay\n– Verified guest information and stay details\n– Sent receipt to guest's email address on file\n– Provided CR ticket number\n– Closed ticket",
+          hasHotelContact
+            ? `– ${name} requested receipt for stay\n– Verified ${name.toLowerCase()} information and stay details\n${hotelContactLine}${responseLine}– Sent receipt to ${name.toLowerCase()}'s email address on file\n– Provided CR ticket number\n– Closed ticket`
+            : `– ${name} requested receipt for stay\n– Verified ${name.toLowerCase()} information and stay details\n– Sent receipt to ${name.toLowerCase()}'s email address on file\n– Provided CR ticket number\n– Closed ticket`,
         "Hotel Complaint":
-          `– Guest called with complaint about hotel stay\n– Listened to guest's concerns\n– Apologized and expressed empathy\n– Documented complaint details\n${hotelContactLine}${complaintLine}– Advised Guest of outcome\n– Provided CR ticket number\n– Closed ticket`
+          `– ${name} called with complaint about hotel stay\n– Listened to ${name.toLowerCase()}'s concerns\n– Apologized and expressed empathy\n${complaintLine}${hotelContactLine}– Advised ${name} of outcome\n– Provided CR ticket number\n– Closed ticket`,
+        "":
+          (hasHotelContact ? hotelContactLine : "") + responseLine || '– No additional details provided.'
       };
-      return templates[reason] || '';
+      return templates[reason] || templates[""];
     }
 
     function updateNote() {
-      const name = nameInput.value.trim();
+      const name = nameInput.value.trim() || 'Guest';
       const contact = contactInput.value.trim();
       const confirmation = confirmationInput.value.trim();
       const reason = reasonSelect.value;
-      const hotelResponse = hotelResponseInput.value.trim();
       const top = `Guest Name: ${name}\nBest Callback Number: ${contact}\nConfirmation Number: ${confirmation}\nReason For Call: ${reason}\n`;
-      const bottom = getBottomTemplate(reason, hotelResponse);
+      const bottom = getBottomTemplate(reason, '', name);
       noteArea.value = `${top}\n${bottom}`;
     }
 
