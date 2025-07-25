@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=500">
   <title>Guest Call Note Generator</title>
+  <link rel="manifest" href="manifest.json">
   <style>
     body {
       font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
@@ -328,6 +329,12 @@
     </div>
   </div>
   <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+
     const nameInput = document.getElementById('name');
     const contactInput = document.getElementById('contact');
     const confirmationInput = document.getElementById('confirmation');
