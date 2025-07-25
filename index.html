@@ -263,12 +263,38 @@
 
     let clearTimeoutId = null;
     let isClearMode = false;
+    let lastFormState = null;
+    let isUndoMode = false;
+
+    function getFormState() {
+      return {
+        name: nameInput.value,
+        contact: contactInput.value,
+        confirmation: confirmationInput.value,
+        hotelResponse: hotelResponseInput.value,
+        hotelContact: hotelContactInput.value,
+        hotelUnreachable: hotelUnreachableCheckbox.checked,
+        reason: reasonSelect.value,
+        note: noteArea.value
+      };
+    }
+    function setFormState(state) {
+      nameInput.value = state.name;
+      contactInput.value = state.contact;
+      confirmationInput.value = state.confirmation;
+      hotelResponseInput.value = state.hotelResponse;
+      hotelContactInput.value = state.hotelContact;
+      hotelUnreachableCheckbox.checked = state.hotelUnreachable;
+      reasonSelect.value = state.reason;
+      updateNote();
+    }
 
     function resetCopyBtn() {
-      copyBtn.classList.remove('clear');
+      copyBtn.classList.remove('clear','undo');
       copyBtn.classList.remove('copied');
       copyBtn.innerHTML = 'Copy to Clipboard';
       isClearMode = false;
+      isUndoMode = false;
       if (clearTimeoutId) {
         clearTimeout(clearTimeoutId);
         clearTimeoutId = null;
@@ -276,25 +302,42 @@
     }
 
     function setClearBtn() {
-      copyBtn.classList.remove('copied');
+      copyBtn.classList.remove('copied','undo');
       copyBtn.classList.add('clear');
       copyBtn.innerHTML = 'Clear?';
       isClearMode = true;
+      isUndoMode = false;
+      if (clearTimeoutId) clearTimeout(clearTimeoutId);
+      clearTimeoutId = setTimeout(resetCopyBtn, 15000);
+    }
+
+    function setUndoBtn() {
+      copyBtn.classList.remove('clear','copied');
+      copyBtn.classList.add('undo');
+      copyBtn.innerHTML = 'Undo';
+      isUndoMode = true;
+      isClearMode = false;
       if (clearTimeoutId) clearTimeout(clearTimeoutId);
       clearTimeoutId = setTimeout(resetCopyBtn, 15000);
     }
 
     copyBtn.addEventListener('click', () => {
-      if (isClearMode) {
-        // Clear all text fields
-        document.getElementById('name').value = '';
-        document.getElementById('contact').value = '';
-        document.getElementById('confirmation').value = '';
-        document.getElementById('hotelResponse').value = '';
-        document.getElementById('hotelContact').value = '';
-        document.getElementById('hotelUnreachable').checked = false;
-        updateNote();
+      if (isUndoMode && lastFormState) {
+        setFormState(lastFormState);
         resetCopyBtn();
+        return;
+      }
+      if (isClearMode) {
+        lastFormState = getFormState();
+        // Clear all text fields
+        nameInput.value = '';
+        contactInput.value = '';
+        confirmationInput.value = '';
+        hotelResponseInput.value = '';
+        hotelContactInput.value = '';
+        hotelUnreachableCheckbox.checked = false;
+        updateNote();
+        setUndoBtn();
         return;
       }
       noteArea.select();
@@ -306,10 +349,16 @@
       }, 400);
     });
 
-    // If user edits any field, reset button
+    // If user edits any field, reset button (and clear undo state)
     [nameInput, contactInput, confirmationInput, reasonSelect, hotelResponseInput, hotelContactInput, hotelUnreachableCheckbox, noteArea].forEach(el => {
-      el.addEventListener('input', resetCopyBtn);
-      el.addEventListener('change', resetCopyBtn);
+      el.addEventListener('input', () => {
+        if (isUndoMode) lastFormState = null;
+        resetCopyBtn();
+      });
+      el.addEventListener('change', () => {
+        if (isUndoMode) lastFormState = null;
+        resetCopyBtn();
+      });
     });
 
     // Initial note
