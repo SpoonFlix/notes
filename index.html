@@ -23,14 +23,17 @@
       overflow: hidden;
     }
     .container {
-      background: rgba(42,54,71,0.98);
-      border-radius: 12px;
-      box-shadow: 0 8px 32px #0006;
+      background: rgba(42,54,71,0.45);
+      border-radius: 32px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       padding: 32px 32px 12px 32px;
       width: 480px;
       max-width: 96vw;
       position: relative;
       animation: fadeIn 0.7s;
+      border: 1.5px solid rgba(255,255,255,0.18);
+      backdrop-filter: blur(18px) saturate(160%) contrast(120%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%) contrast(120%);
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
@@ -54,26 +57,32 @@
       letter-spacing: 0.5px;
       font-size: 0.98em;
     }
+    input, select, textarea, button {
+      border-radius: 18px !important;
+    }
     input, select, textarea {
       width: 100%;
       padding: 10px;
-      border-radius: 6px;
       border: none;
       font-size: 0.98em;
       margin-bottom: 4px;
-      background: #1b2532;
-      color: #f3f3f3;
+      background: rgba(255,255,255,0.55);
+      color: #1b2532;
       box-sizing: border-box;
-      transition: box-shadow 0.2s, border 0.2s;
+      transition: box-shadow 0.2s, border 0.2s, background 0.2s, color 0.2s;
       outline: none;
+      box-shadow: 0 1px 6px #0001;
+      border: 1.5px solid rgba(60,60,100,0.08);
     }
     input:focus, select:focus, textarea:focus {
-      box-shadow: 0 0 0 2px #3b82f6;
-      border: 1px solid #3b82f6;
+      box-shadow: 0 0 0 2px #3b82f6, 0 1px 6px #0001;
+      border: 1.5px solid #3b82f6;
+      background: rgba(255,255,255,0.85);
+      color: #181f2a;
     }
     select {
       cursor: pointer;
-      background: #1b2532 url('data:image/svg+xml;utf8,<svg fill="%23a5b4fc" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 7.293a1 1 0 011.414 0L10 8.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/></svg>') no-repeat right 12px center/18px 18px;
+      background: rgba(255,255,255,0.55) url('data:image/svg+xml;utf8,<svg fill="%231b2532" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 7.293a1 1 0 011.414 0L10 8.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/></svg>') no-repeat right 12px center/18px 18px;
       appearance: none;
     }
     textarea {
@@ -82,16 +91,16 @@
       margin-top: 10px;
       font-family: 'Fira Mono', 'Consolas', monospace;
       font-size: 0.97em;
-      background: #181f2a;
-      color: #e0e7ff;
-      border: 1px solid #3b82f6;
-      box-shadow: 0 2px 8px #0002;
+      background: rgba(255,255,255,0.55);
+      color: #1b2532;
+      border: 1.5px solid rgba(60,60,100,0.08);
+      box-shadow: 0 2px 8px #0001;
     }
     button {
       background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
       color: #fff;
       border: none;
-      border-radius: 6px;
+      border-radius: 18px;
       padding: 10px 0;
       font-size: 1em;
       font-weight: 700;
@@ -125,10 +134,53 @@
       color: #a5b4fc;
       font-size: 0.92em;
       letter-spacing: 0.5px;
+      border-radius: 18px;
     }
     .field-group {
       display: flex;
       gap: 16px;
+    }
+    .field-group > div {
+      border-radius: 18px;
+    }
+    /* Custom iOS-style checkbox */
+    input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 8px;
+      border: 2px solid #a5b4fc;
+      background: rgba(255,255,255,0.7);
+      transition: border-color 0.2s, background 0.2s;
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 0 1px 4px #0001;
+      margin-right: 4px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    input[type="checkbox"]:checked {
+      background: linear-gradient(90deg, #6366f1 0%, #3b82f6 100%);
+      border-color: #6366f1;
+    }
+    input[type="checkbox"]:checked::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 6px;
+      top: 2px;
+      width: 7px;
+      height: 13px;
+      border: solid #fff;
+      border-width: 0 3px 3px 0;
+      border-radius: 2px;
+      transform: rotate(45deg);
+    }
+    input[type="checkbox"]:focus {
+      box-shadow: 0 0 0 2px #a5b4fc44;
+      border-color: #6366f1;
     }
     @media (max-width: 600px) {
       .container {
