@@ -1,5 +1,5 @@
 {
-  "name": "Guest Call Note Generator",
+  "name": "Call Notes",
   "short_name": "Call Notes",
   "start_url": "./index.html",
   "display": "standalone",
@@ -8,12 +8,12 @@
   "description": "Generate and manage guest call notes efficiently.",
   "icons": [
     {
-      "src": "data/logo.png",
+      "src": "data/notes.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "data/logo.png",
+      "src": "data/notes.png",
       "sizes": "512x512",
       "type": "image/png"
     }
