@@ -139,18 +139,22 @@
 <body>
   <div class="container">
     <form id="noteForm" autocomplete="off">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required>
-
-      <label for="contact">Contact Number:</label>
-      <input type="text" id="contact" required>
-
+      <div class="field-group">
+        <div style="flex:1;min-width:0;">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" required>
+        </div>
+        <div style="flex:1;min-width:0;">
+          <label for="contact">Contact Number:</label>
+          <input type="text" id="contact" required>
+        </div>
+      </div>
       <label for="confirmation">Confirmation Number:</label>
       <input type="text" id="confirmation" required>
 
       <label for="reason">Reason for Call:</label>
       <select id="reason">
-        <option>Modify Reservation/Too Late to Cancel</option>
+        <option>Modify Reservation</option>
         <option>Too Late to Cancel</option>
         <option>Request Receipt</option>
         <option>Hotel Complaint</option>
@@ -158,6 +162,13 @@
 
       <label for="hotelResponse">Response:</label>
       <input type="text" id="hotelResponse" placeholder="Optional">
+
+      <label for="hotelContact">Hotel Contact:</label>
+      <input type="text" id="hotelContact" placeholder="e.g. Manager Bill">
+      <div style="margin: 6px 0 0 0; display: flex; align-items: center; gap: 8px; justify-content: center;">
+        <input type="checkbox" id="hotelUnreachable" style="width:16px;height:16px;">
+        <label for="hotelUnreachable" style="margin:0;font-weight:400;font-size:0.97em;cursor:pointer;">Could not reach hotel</label>
+      </div>
       <textarea id="note"></textarea>
 
       <button type="button" id="copyBtn">Copy to Clipboard</button>
@@ -172,22 +183,37 @@
     const confirmationInput = document.getElementById('confirmation');
     const reasonSelect = document.getElementById('reason');
     const hotelResponseInput = document.getElementById('hotelResponse');
+    const hotelContactInput = document.getElementById('hotelContact');
+    const hotelUnreachableCheckbox = document.getElementById('hotelUnreachable');
     const noteArea = document.getElementById('note');
     const copyBtn = document.getElementById('copyBtn');
+
+    function getHotelContactLine() {
+      const contact = hotelContactInput.value.trim();
+      const unreachable = hotelUnreachableCheckbox.checked;
+      if (contact) {
+        return `– Spoke with ${contact} at the hotel\n`;
+      } else if (unreachable) {
+        return `– Attempted to reach hotel unsuccessfully.\n`;
+      } else {
+        return `– Contacted hotel for possible changes\n`;
+      }
+    }
 
     function getBottomTemplate(reason, hotelResponse) {
       let responseLine = hotelResponse ? `– Hotel advised that ${hotelResponse}\n` : '';
       let modifyLine = hotelResponse ? `– ${hotelResponse}\n` : '';
       let complaintLine = hotelResponse ? `– ${hotelResponse}\n` : '';
+      const hotelContactLine = getHotelContactLine();
       const templates = {
         "Too Late to Cancel":
-          `– Guest called and stated that they needed to cancel a reservation\n– Guest provided confirmation number and reservation was verified\n– Advised Guest that reservation was listed as too late to cancel and explain policy\n– Gave sorry/empathy statement\n– Contacted hotel to see if hotel was willing to cancel reservation\n${responseLine}– Advised Guest of above\n– Provided Guest CR ticket number\n– Sent to member web for hotel records\n– Closed ticket`,
-        "Modify Reservation/Too Late to Cancel":
-          `– Guest called to modify reservation\n– Provided confirmation number and verified reservation\n– Explained modification/cancellation policy\n– Contacted hotel for possible changes\n${modifyLine}– Advised Guest accordingly\n– Provided CR ticket number\n– Closed ticket`,
+          `– Guest called and stated that they needed to cancel a reservation\n– Guest provided confirmation number and reservation was verified\n– Advised Guest that reservation was listed as too late to cancel and explain policy\n– Gave sorry/empathy statement\n${hotelContactLine}${responseLine}– Advised Guest of above\n– Provided Guest CR ticket number\n– Sent to member web for hotel records\n– Closed ticket`,
+        "Modify Reservation":
+          `– Guest called to modify reservation\n– Provided confirmation number and verified reservation\n– Explained modification/cancellation policy\n${hotelContactLine}${modifyLine}– Advised Guest accordingly\n– Provided CR ticket number\n– Closed ticket`,
         "Request Receipt":
           "– Guest requested receipt for stay\n– Verified guest information and stay details\n– Sent receipt to guest's email address on file\n– Provided CR ticket number\n– Closed ticket",
         "Hotel Complaint":
-          `– Guest called with complaint about hotel stay\n– Listened to guest's concerns\n– Apologized and expressed empathy\n– Documented complaint details\n– Contacted hotel for resolution\n${complaintLine}– Advised Guest of outcome\n– Provided CR ticket number\n– Closed ticket`
+          `– Guest called with complaint about hotel stay\n– Listened to guest's concerns\n– Apologized and expressed empathy\n– Documented complaint details\n${hotelContactLine}${complaintLine}– Advised Guest of outcome\n– Provided CR ticket number\n– Closed ticket`
       };
       return templates[reason] || '';
     }
@@ -204,9 +230,24 @@
     }
 
     // Auto-update note on input
-    [nameInput, contactInput, confirmationInput, reasonSelect, hotelResponseInput].forEach(el => {
+    [nameInput, contactInput, confirmationInput, reasonSelect, hotelResponseInput, hotelContactInput, hotelUnreachableCheckbox].forEach(el => {
       el.addEventListener('input', updateNote);
       el.addEventListener('change', updateNote);
+    });
+
+    // Mutually exclusive logic
+    hotelContactInput.addEventListener('input', () => {
+      if (hotelContactInput.value.trim()) {
+        hotelUnreachableCheckbox.checked = false;
+      }
+      // Always keep checkbox enabled
+    });
+    hotelUnreachableCheckbox.addEventListener('change', () => {
+      if (hotelUnreachableCheckbox.checked) {
+        hotelContactInput.value = '';
+      }
+      // Always keep contact input enabled
+      updateNote();
     });
 
     // Allow manual edits to note
