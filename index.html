@@ -122,6 +122,11 @@
       color: #fff !important;
       transition: background 0.2s, color 0.2s;
     }
+    button.undo {
+      background: linear-gradient(90deg, #f87171 0%, #ef4444 100%) !important;
+      color: #fff !important;
+      transition: background 0.2s, color 0.2s;
+    }
     .note-label {
       margin-top: 22px;
       font-weight: 600;
@@ -290,9 +295,29 @@
     }
 
     // Auto-update note on input
-    [nameInput, contactInput, confirmationInput, reasonSelect, hotelResponseInput, hotelContactInput, hotelUnreachableCheckbox].forEach(el => {
+    [nameInput, confirmationInput, reasonSelect, hotelResponseInput, hotelContactInput, hotelUnreachableCheckbox].forEach(el => {
       el.addEventListener('input', updateNote);
       el.addEventListener('change', updateNote);
+    });
+
+    // Phone number formatting
+    const formatPhoneNumber = (value) => {
+      // Remove all non-digit characters
+      const digits = value.replace(/\D/g, '');
+      if (digits.length === 0) return '';
+      if (digits.length < 4) return `(${digits}`;
+      if (digits.length < 7) return `(${digits.slice(0,3)}) ${digits.slice(3)}`;
+      return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6,10)}`;
+    };
+
+    contactInput.addEventListener('input', (e) => {
+      const cursor = contactInput.selectionStart;
+      const prev = contactInput.value;
+      const formatted = formatPhoneNumber(prev);
+      contactInput.value = formatted;
+      // Try to keep cursor at end for most cases
+      contactInput.setSelectionRange(formatted.length, formatted.length);
+      updateNote();
     });
 
     // Mutually exclusive logic
