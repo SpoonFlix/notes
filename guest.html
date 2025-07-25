@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=500">
+  <title>Guest Call Note Generator</title>
+  <style>
+    body {
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #3b82f6 0%, #222c37 100%);
+      color: #f3f3f3;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: rgba(42,54,71,0.98);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px #0006;
+      padding: 40px 32px 32px 32px;
+      margin-top: 32px;
+      width: 480px;
+      max-width: 98vw;
+      position: relative;
+      animation: fadeIn 0.7s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 28px;
+      font-size: 2em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #fff;
+      text-shadow: 0 2px 8px #0003;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 7px;
+      font-weight: 600;
+      color: #a5b4fc;
+      letter-spacing: 0.5px;
+      font-size: 1.08em;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1.08em;
+      margin-bottom: 4px;
+      background: #1b2532;
+      color: #f3f3f3;
+      box-sizing: border-box;
+      transition: box-shadow 0.2s, border 0.2s;
+      outline: none;
+    }
+    input:focus, select:focus, textarea:focus {
+      box-shadow: 0 0 0 2px #3b82f6;
+      border: 1px solid #3b82f6;
+    }
+    select {
+      cursor: pointer;
+      background: #1b2532 url('data:image/svg+xml;utf8,<svg fill="%23a5b4fc" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 7.293a1 1 0 011.414 0L10 8.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/></svg>') no-repeat right 12px center/18px 18px;
+      appearance: none;
+    }
+    textarea {
+      min-height: 340px;
+      resize: vertical;
+      margin-top: 10px;
+      font-family: 'Fira Mono', 'Consolas', monospace;
+      font-size: 1.05em;
+      background: #181f2a;
+      color: #e0e7ff;
+      border: 1px solid #3b82f6;
+      box-shadow: 0 2px 8px #0002;
+    }
+    button {
+      background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 0;
+      font-size: 1.15em;
+      font-weight: 700;
+      width: 100%;
+      margin-top: 22px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #0002;
+      transition: background 0.2s, transform 0.1s;
+      letter-spacing: 0.5px;
+    }
+    button:active {
+      transform: scale(0.98);
+    }
+    button.copied {
+      background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);
+    }
+    .note-label {
+      margin-top: 22px;
+      font-weight: 600;
+      color: #a5b4fc;
+      font-size: 1.08em;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 38px;
+      color: #a5b4fc;
+      font-size: 1em;
+      letter-spacing: 0.5px;
+    }
+    .field-group {
+      display: flex;
+      gap: 16px;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 18px 6px 18px 6px;
+        width: 99vw;
+      }
+      h1 {
+        font-size: 1.2em;
+      }
+      textarea {
+        min-height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form id="noteForm" autocomplete="off">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="contact">Contact Number:</label>
+      <input type="text" id="contact" required>
+
+      <label for="confirmation">Confirmation Number:</label>
+      <input type="text" id="confirmation" required>
+
+      <label for="reason">Reason for Call:</label>
+      <select id="reason">
+        <option>Modify Reservation/Too Late to Cancel</option>
+        <option>Too Late to Cancel</option>
+        <option>Request Receipt</option>
+        <option>Hotel Complaint</option>
+      </select>
+
+      <label for="hotelResponse">Response:</label>
+      <input type="text" id="hotelResponse" placeholder="Optional">
+      <textarea id="note"></textarea>
+
+      <button type="button" id="copyBtn">Copy to Clipboard</button>
+    </form>
+  </div>
+  <script>
+    const nameInput = document.getElementById('name');
+    const contactInput = document.getElementById('contact');
+    const confirmationInput = document.getElementById('confirmation');
+    const reasonSelect = document.getElementById('reason');
+    const hotelResponseInput = document.getElementById('hotelResponse');
+    const noteArea = document.getElementById('note');
+    const copyBtn = document.getElementById('copyBtn');
+
+    function getBottomTemplate(reason, hotelResponse) {
+      let responseLine = hotelResponse ? `– Hotel advised that ${hotelResponse}\n` : '';
+      let modifyLine = hotelResponse ? `– ${hotelResponse}\n` : '';
+      let complaintLine = hotelResponse ? `– ${hotelResponse}\n` : '';
+      const templates = {
+        "Too Late to Cancel":
+          `– Guest called and stated that they needed to cancel a reservation\n– Guest provided confirmation number and reservation was verified\n– Advised Guest that reservation was listed as too late to cancel and explain policy\n– Gave sorry/empathy statement\n– Contacted hotel to see if hotel was willing to cancel reservation\n${responseLine}– Advised Guest of above\n– Provided Guest CR ticket number\n– Sent to member web for hotel records\n– Closed ticket`,
+        "Modify Reservation/Too Late to Cancel":
+          `– Guest called to modify reservation\n– Provided confirmation number and verified reservation\n– Explained modification/cancellation policy\n– Contacted hotel for possible changes\n${modifyLine}– Advised Guest accordingly\n– Provided CR ticket number\n– Closed ticket`,
+        "Request Receipt":
+          "– Guest requested receipt for stay\n– Verified guest information and stay details\n– Sent receipt to guest's email address on file\n– Provided CR ticket number\n– Closed ticket",
+        "Hotel Complaint":
+          `– Guest called with complaint about hotel stay\n– Listened to guest's concerns\n– Apologized and expressed empathy\n– Documented complaint details\n– Contacted hotel for resolution\n${complaintLine}– Advised Guest of outcome\n– Provided CR ticket number\n– Closed ticket`
+      };
+      return templates[reason] || '';
+    }
+
+    function updateNote() {
+      const name = nameInput.value.trim();
+      const contact = contactInput.value.trim();
+      const confirmation = confirmationInput.value.trim();
+      const reason = reasonSelect.value;
+      const hotelResponse = hotelResponseInput.value.trim();
+      const top = `Guest Name: ${name}\nBest Callback Number: ${contact}\nConfirmation Number: ${confirmation}\nReason For Call: ${reason}\n`;
+      const bottom = getBottomTemplate(reason, hotelResponse);
+      noteArea.value = `${top}\n${bottom}`;
+    }
+
+    // Auto-update note on input
+    [nameInput, contactInput, confirmationInput, reasonSelect, hotelResponseInput].forEach(el => {
+      el.addEventListener('input', updateNote);
+      el.addEventListener('change', updateNote);
+    });
+
+    // Allow manual edits to note
+    noteArea.addEventListener('input', () => {});
+
+    // Copy to clipboard
+    copyBtn.addEventListener('click', () => {
+      noteArea.select();
+      document.execCommand('copy');
+      copyBtn.classList.add('copied');
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => {
+        copyBtn.classList.remove('copied');
+        copyBtn.textContent = 'Copy to Clipboard';
+      }, 1200);
+    });
+
+    // Initial note
+    updateNote();
+  </script>
+</body>
+</html>
