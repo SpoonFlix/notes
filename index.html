@@ -260,6 +260,86 @@
       pointer-events: none;
       z-index: 2;
     }
+    .enter-icon {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #3b82f6;
+      opacity: 0.7;
+      font-size: 1.1em;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .custom-dropdown {
+      position: relative;
+      width: 100%;
+      background: rgba(255,255,255,0.55);
+      border-radius: 18px;
+      box-shadow: 0 1px 6px #0001;
+      border: 1.5px solid rgba(60,60,100,0.08);
+      cursor: pointer;
+      font-size: 0.98em;
+      margin-bottom: 4px;
+      min-width: 0;
+    }
+    .selected-option {
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #1b2532;
+    }
+    .dropdown-options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 4px 16px #0002;
+      z-index: 10;
+      max-height: 260px;
+      overflow-y: auto;
+    }
+    .dropdown-option {
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #1b2532;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .dropdown-option:hover, .dropdown-option.active {
+      background: #e0e7ff;
+    }
+    .floating-clear-btn, .floating-undo-btn {
+      position: absolute;
+      top: 18px;
+      right: 24px;
+      z-index: 100;
+      background: rgba(42,54,71,0.85);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px #0002;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+      border: 1.5px solid rgba(255,255,255,0.18);
+    }
+    .floating-clear-btn:hover, .floating-undo-btn:hover {
+      background: #ef4444;
+      color: #fff;
+    }
+    .floating-clear-btn i, .floating-undo-btn i {
+      font-size: 1.3em;
+      color: #fff;
+      pointer-events: none;
+    }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -286,28 +366,45 @@
         <label for="confirmation"><span>Confirmation Number</span></label>
         <div style="position:relative;">
           <i class="fa-solid fa-hashtag input-icon"></i>
-          <input type="text" id="confirmation" required placeholder="73734552">
+          <input type="text" id="confirmation" required placeholder="49123491123">
         </div>
       </div>
       <div class="input-icon-group">
-        <label for="reason"><span>Reason for Call</span></label>
-        <div style="position:relative;">
-          <i class="fa-solid fa-list input-icon"></i>
-          <select id="reason" style="padding-left:44px; appearance:none; background:rgba(255,255,255,0.55);">
-            <option disabled selected value="">Select a reason...</option>
-            <option>Modify Reservation</option>
-            <option>Too Late to Cancel</option>
-            <option>Request Receipt</option>
-            <option>Hotel Complaint</option>
-          </select>
-          <i class="fa-solid fa-chevron-down input-select-arrow" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#3b82f6;opacity:0.7;font-size:1em;pointer-events:none;"></i>
+        <label for="reason"><span>Quick Notes</span></label>
+        <div id="reason-flex-group" style="position:relative;display:flex;gap:12px;align-items:center;">
+          <div style="flex:1;min-width:0;position:relative;">
+            <div id="customDropdown" class="custom-dropdown" tabindex="0">
+              <div class="selected-option" id="selectedOption">
+                <i class="fa-solid fa-note-sticky" style="color:#3b82f6;"></i> <span>New Note</span>
+              </div>
+              <div class="dropdown-options" id="dropdownOptions" style="display:none;">
+                <div class="dropdown-option" data-value="New Note"><i class="fa-solid fa-note-sticky" style="color:#3b82f6;"></i> New Note</div>
+                <div class="dropdown-option" data-value="Modify Reservation"><i class="fa-solid fa-pen-to-square" style="color:#3b82f6;"></i> Modify Reservation</div>
+                <div class="dropdown-option" data-value="Too Late to Cancel"><i class="fa-solid fa-clock" style="color:#3b82f6;"></i> Too Late to Cancel</div>
+                <div class="dropdown-option" data-value="Request Receipt"><i class="fa-solid fa-file-invoice" style="color:#3b82f6;"></i> Request Receipt</div>
+                <div class="dropdown-option" data-value="Hotel Complaint"><i class="fa-solid fa-triangle-exclamation" style="color:#3b82f6;"></i> Hotel Complaint</div>
+                <div class="dropdown-option" data-value="Incorrectly Billed"><i class="fa-solid fa-money-bill-wave" style="color:#3b82f6;"></i> Incorrectly Billed</div>
+                <div class="dropdown-option" data-value="Deposit Issue"><i class="fa-solid fa-piggy-bank" style="color:#3b82f6;"></i> Deposit Issue</div>
+              </div>
+            </div>
+            <input type="hidden" id="reason" value="New Note">
+          </div>
+          <div id="customReasonWrapper" style="flex:1;min-width:0;position:relative;display:inline-block;">
+            <span id="customReasonIconInput" style="width:100%;display:flex;align-items:center;">
+              <i class="fa-solid fa-question-circle input-icon"></i>
+              <input type="text" id="customReason" placeholder="Reason For Call" style="width:100%;" />
+            </span>
+          </div>
         </div>
       </div>
       <div class="input-icon-group">
-        <label for="hotelResponse"><span>Response</span></label>
+        <label for="hotelResponse"><span>What Happened?</span></label>
         <div style="position:relative;">
           <i class="fa-solid fa-comment-dots input-icon"></i>
           <input type="text" id="hotelResponse" placeholder="Tip: Press Enter to add multiple responses">
+          <span class="enter-icon" id="enterIcon" title="Press Enter to add" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);color:#3b82f6;opacity:0.7;font-size:1.1em;pointer-events:none;z-index:2;display:none;">
+            <i class="fa-solid fa-arrow-turn-down"></i>
+          </span>
         </div>
       </div>
       <div class="input-icon-group">
@@ -328,6 +425,13 @@
     <div class="footer">
       <a href="mailto:dylatwad@gmail.com" style="color:#a5b4fc;text-decoration:underline dotted 1.5px;opacity:0.7;font-size:0.98em;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">dylatwad@gmail.com</a>
     </div>
+    <!-- Floating Clear/Undo Button -->
+    <div id="floatingClearBtn" class="floating-clear-btn" title="Clear form">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div id="floatingUndoBtn" class="floating-undo-btn" title="Undo clear" style="display:none;">
+      <i class="fa-solid fa-rotate-left"></i>
+    </div>
   </div>
   <script>
     if ('serviceWorker' in navigator) {
@@ -345,10 +449,34 @@
     const hotelUnreachableCheckbox = document.getElementById('hotelUnreachable');
     const noteArea = document.getElementById('note');
     const copyBtn = document.getElementById('copyBtn');
+    const customReasonInput = document.getElementById('customReason');
+    const customDropdown = document.getElementById('customDropdown');
+    const dropdownOptions = document.getElementById('dropdownOptions');
+    const selectedOption = document.getElementById('selectedOption');
+    const reasonInput = document.getElementById('reason');
+    const floatingClearBtn = document.getElementById('floatingClearBtn');
+    const floatingUndoBtn = document.getElementById('floatingUndoBtn');
+    let responseLines = [];
+    let responseLinesBackup = [];
+    let lastFormStateFloating = null;
+    let lastResponseLinesFloating = [];
+
+    function updateCustomReasonVisibility() {
+      const customReasonWrapper = document.getElementById('customReasonWrapper');
+      if (reasonSelect.value === 'New Note') {
+        customReasonWrapper.style.display = 'inline-block';
+        reasonSelect.style.flex = 'unset';
+      } else {
+        customReasonWrapper.style.display = 'none';
+        reasonSelect.style.flex = '1';
+      }
+    }
+    reasonSelect.addEventListener('change', updateCustomReasonVisibility);
+    updateCustomReasonVisibility();
+    reasonSelect.addEventListener('change', updateCustomReasonVisibility);
+    updateCustomReasonVisibility();
 
     // Store multiple responses
-    let responseLines = [];
-
     hotelResponseInput.addEventListener('keydown', function(e) {
       if (e.key === 'Enter') {
         e.preventDefault();
@@ -366,6 +494,12 @@
     });
 
     hotelResponseInput.addEventListener('input', function() {
+      const enterIcon = document.getElementById('enterIcon');
+      if (hotelResponseInput.value.trim()) {
+        enterIcon.style.display = 'inline';
+      } else {
+        enterIcon.style.display = 'none';
+      }
       updateNote();
     });
 
@@ -377,34 +511,40 @@
       } else if (unreachable) {
         return `– Attempted to reach hotel unsuccessfully.\n`;
       } else {
-        return `– Contacted hotel for possible changes\n`;
+        return "";
       }
     }
 
     function getBottomTemplate(reason, _hotelResponse, name) {
-      // Always include all entered lines plus the current field value (if not empty)
       let allResponses = responseLines.slice();
       if (hotelResponseInput.value.trim()) {
         allResponses.push(hotelResponseInput.value.trim());
       }
+      let customReason = customReasonInput.value.trim();
       let responseLine = allResponses.length ? allResponses.map(r => `– ${r}\n`).join('') : '';
       let modifyLine = responseLine;
       let complaintLine = responseLine || '– Documented complaint details\n';
       const hotelContactLine = getHotelContactLine();
-      const hasHotelContact = hotelContactInput.value.trim() || hotelUnreachableCheckbox.checked;
+      const sorryLine = '– Gave sorry/empathy statement\n';
       const templates = {
         "Too Late to Cancel":
-          `– ${name} called and stated that they needed to cancel a reservation\n– ${name} provided confirmation number and reservation was verified\n– Advised ${name} that reservation was listed as too late to cancel and explain policy\n– Gave sorry/empathy statement\n${hotelContactLine}${responseLine}– Advised ${name} of above\n– Provided ${name} CR ticket number\n– Sent to member web for hotel records\n– Closed ticket`,
+          `– ${name} called and stated that they needed to cancel a reservation\n${sorryLine}– ${name} provided confirmation number and reservation was verified\n${hotelContactLine}${responseLine}– Advised ${name} of above\n– Provided ${name} CR ticket number\n– Sent to member web for hotel records\n– Closed ticket`,
         "Modify Reservation":
-          `– ${name} called to modify reservation\n– Provided confirmation number and verified reservation\n– Explained modification/cancellation policy\n${hotelContactLine}${modifyLine}– Advised ${name} accordingly\n– Provided CR ticket number\n– Closed ticket`,
+          `– ${name} called to modify reservation\n${sorryLine}– Provided confirmation number and verified reservation\n${hotelContactLine}${modifyLine}– Advised ${name} accordingly\n– Provided CR ticket number\n– Closed ticket`,
         "Request Receipt":
-          hasHotelContact
-            ? `– ${name} requested receipt for stay\n– Verified ${name.toLowerCase()} information and stay details\n${hotelContactLine}${responseLine}– Sent receipt to ${name.toLowerCase()}'s email address on file\n– Provided CR ticket number\n– Closed ticket`
-            : `– ${name} requested receipt for stay\n– Verified ${name.toLowerCase()} information and stay details\n– Sent receipt to ${name.toLowerCase()}'s email address on file\n– Provided CR ticket number\n– Closed ticket`,
+          hotelContactLine
+            ? `– ${name} requested receipt for stay\n${sorryLine}– Verified ${name.toLowerCase()} information and stay details\n${hotelContactLine}${responseLine}– Sent receipt to ${name.toLowerCase()}'s email address on file\n– Provided CR ticket number\n– Closed ticket`
+            : `– ${name} requested receipt for stay\n${sorryLine}– Verified ${name.toLowerCase()} information and stay details\n– Sent receipt to ${name.toLowerCase()}'s email address on file\n– Provided CR ticket number\n– Closed ticket`,
         "Hotel Complaint":
-          `– ${name} called with complaint about hotel stay\n– Listened to ${name.toLowerCase()}'s concerns\n– Apologized and expressed empathy\n${complaintLine}${hotelContactLine}– Advised ${name} of outcome\n– Provided CR ticket number\n– Closed ticket`,
+          `– ${name} called with complaint about hotel stay\n${sorryLine}– Listened to ${name.toLowerCase()}'s concerns\n${complaintLine}${hotelContactLine}– Advised ${name} of outcome\n– Provided CR ticket number\n– Closed ticket`,
+        "Incorrectly Billed":
+          `– ${name} called and stated they had been incorrectly billed for a recent stay\n${sorryLine}– ${name} provided confirmation number and reservation was verified\n${hotelContactInput.value.trim() ? `– Spoke with ${hotelContactInput.value.trim()} at hotel\n` : hotelUnreachableCheckbox.checked ? `– Attempted to reach hotel unsuccessfully.\n` : ''}${responseLine}– Advised ${name} of above\n– Sent to member web for hotel records\n– Closed ticket`,
+        "Deposit Issue":
+          `– ${name} called and stated that they did not receive their deposit back for their recent stay\n${sorryLine}– ${name} provided confirmation number and reservation was verified\n${getHotelContactLine()}${responseLine}– Advised ${name} of above and explained timeline for banks to release funds\n– Sent to member web for hotel response\n– Closed ticket`,
+        "New Note":
+          `${sorryLine}${responseLine}${hotelContactLine}– Closed ticket`,
         "":
-          (hasHotelContact ? hotelContactLine : "") + responseLine || '– No additional details provided.'
+          `${sorryLine}${responseLine}${hotelContactLine}– Closed ticket`
       };
       return templates[reason] || templates[""];
     }
@@ -413,14 +553,23 @@
       const name = nameInput.value.trim() || 'Guest';
       const contact = contactInput.value.trim();
       const confirmation = confirmationInput.value.trim();
-      const reason = reasonSelect.value;
+      let reason = reasonSelect.value;
+      let customReason = customReasonInput.value.trim();
+      // If New Note is selected, use customReason for Reason for Call
+      if (reason === 'New Note') {
+        reason = customReason || '';
+      }
       const top = `Guest Name: ${name}\nBest Callback Number: ${contact}\nConfirmation Number: ${confirmation}\nReason For Call: ${reason}\n`;
-      const bottom = getBottomTemplate(reason, '', name);
+      const bottom = getBottomTemplate(reasonSelect.value, '', name);
       noteArea.value = `${top}\n${bottom}`;
     }
 
     // Auto-update note on input
     [nameInput, confirmationInput, reasonSelect, hotelResponseInput, hotelContactInput, hotelUnreachableCheckbox].forEach(el => {
+      el.addEventListener('input', updateNote);
+      el.addEventListener('change', updateNote);
+    });
+    [customReasonInput].forEach(el => {
       el.addEventListener('input', updateNote);
       el.addEventListener('change', updateNote);
     });
@@ -477,6 +626,7 @@
         hotelContact: hotelContactInput.value,
         hotelUnreachable: hotelUnreachableCheckbox.checked,
         reason: reasonSelect.value,
+        customReason: customReasonInput.value,
         note: noteArea.value
       };
     }
@@ -488,79 +638,120 @@
       hotelContactInput.value = state.hotelContact;
       hotelUnreachableCheckbox.checked = state.hotelUnreachable;
       reasonSelect.value = state.reason;
+      customReasonInput.value = state.customReason !== undefined ? state.customReason : '';
+      updateCustomReasonVisibility();
       updateNote();
     }
 
     function resetCopyBtn() {
-      copyBtn.classList.remove('clear','undo');
       copyBtn.classList.remove('copied');
       copyBtn.innerHTML = 'Copy to Clipboard';
-      isClearMode = false;
-      isUndoMode = false;
-      if (clearTimeoutId) {
-        clearTimeout(clearTimeoutId);
-        clearTimeoutId = null;
-      }
-    }
-
-    function setClearBtn() {
-      copyBtn.classList.remove('copied','undo');
-      copyBtn.classList.add('clear');
-      copyBtn.innerHTML = 'Clear?';
-      isClearMode = true;
-      isUndoMode = false;
-      if (clearTimeoutId) clearTimeout(clearTimeoutId);
-      clearTimeoutId = setTimeout(resetCopyBtn, 15000);
-    }
-
-    function setUndoBtn() {
-      copyBtn.classList.remove('clear','copied');
-      copyBtn.classList.add('undo');
-      copyBtn.innerHTML = 'Undo';
-      isUndoMode = true;
-      isClearMode = false;
-      if (clearTimeoutId) clearTimeout(clearTimeoutId);
-      clearTimeoutId = setTimeout(resetCopyBtn, 15000);
     }
 
     copyBtn.addEventListener('click', () => {
-      if (isUndoMode && lastFormState) {
-        setFormState(lastFormState);
-        resetCopyBtn();
-        return;
-      }
-      if (isClearMode) {
-        lastFormState = getFormState();
-        // Clear all text fields
-        nameInput.value = '';
-        contactInput.value = '';
-        confirmationInput.value = '';
-        hotelResponseInput.value = '';
-        hotelContactInput.value = '';
-        hotelUnreachableCheckbox.checked = false;
-        updateNote();
-        setUndoBtn();
-        return;
-      }
       noteArea.select();
       document.execCommand('copy');
       copyBtn.classList.add('copied');
       copyBtn.textContent = 'Copied!';
+      // Backup and clear the responseLines buffer, but do NOT update the note
+      responseLinesBackup = responseLines.slice();
+      responseLines = [];
       setTimeout(() => {
-        setClearBtn();
+        resetCopyBtn();
       }, 400);
     });
 
-    // If user edits any field, reset button (and clear undo state)
-    [nameInput, contactInput, confirmationInput, reasonSelect, hotelResponseInput, hotelContactInput, hotelUnreachableCheckbox, noteArea].forEach(el => {
+    floatingClearBtn.addEventListener('click', () => {
+      lastFormStateFloating = getFormState();
+      lastResponseLinesFloating = responseLines.slice();
+      // Clear all text fields
+      nameInput.value = '';
+      contactInput.value = '';
+      confirmationInput.value = '';
+      hotelResponseInput.value = '';
+      hotelContactInput.value = '';
+      hotelUnreachableCheckbox.checked = false;
+      customReasonInput.value = '';
+      responseLines = [];
+      updateNote();
+      floatingClearBtn.style.display = 'none';
+      floatingUndoBtn.style.display = 'flex';
+    });
+
+    floatingUndoBtn.addEventListener('click', () => {
+      if (lastFormStateFloating) {
+        setFormState(lastFormStateFloating);
+        responseLines = lastResponseLinesFloating.slice();
+        updateNote();
+      }
+      floatingUndoBtn.style.display = 'none';
+      floatingClearBtn.style.display = 'flex';
+    });
+
+    // Show/hide floating clear button based on form state
+    function updateFloatingClearBtnVisibility() {
+      const isFilled = nameInput.value || contactInput.value || confirmationInput.value || hotelResponseInput.value || hotelContactInput.value || customReasonInput.value || responseLines.length;
+      if (isFilled && floatingUndoBtn.style.display !== 'flex') {
+        floatingClearBtn.style.display = 'flex';
+      } else {
+        floatingClearBtn.style.display = 'none';
+      }
+    }
+
+    // Update visibility on input/change
+    [nameInput, contactInput, confirmationInput, reasonSelect, hotelResponseInput, hotelContactInput, hotelUnreachableCheckbox, customReasonInput, noteArea].forEach(el => {
       el.addEventListener('input', () => {
-        if (isUndoMode) lastFormState = null;
-        resetCopyBtn();
+        // If undo is showing, revert to clear button
+        if (floatingUndoBtn.style.display === 'flex') {
+          floatingUndoBtn.style.display = 'none';
+          floatingClearBtn.style.display = 'flex';
+        }
+        updateFloatingClearBtnVisibility();
       });
       el.addEventListener('change', () => {
-        if (isUndoMode) lastFormState = null;
-        resetCopyBtn();
+        if (floatingUndoBtn.style.display === 'flex') {
+          floatingUndoBtn.style.display = 'none';
+          floatingClearBtn.style.display = 'flex';
+        }
+        updateFloatingClearBtnVisibility();
       });
+    });
+
+    // Initial visibility
+    updateFloatingClearBtnVisibility();
+
+    // Custom dropdown logic
+    customDropdown.addEventListener('click', () => {
+      dropdownOptions.style.display = dropdownOptions.style.display === 'none' ? 'block' : 'none';
+    });
+
+    dropdownOptions.addEventListener('click', (e) => {
+      let target = e.target;
+      if (!target.classList.contains('dropdown-option')) {
+        target = target.closest('.dropdown-option');
+      }
+      if (target) {
+        const value = target.getAttribute('data-value');
+        selectedOption.innerHTML = target.innerHTML;
+        reasonInput.value = value;
+        dropdownOptions.style.display = 'none';
+        updateCustomReasonVisibility();
+        updateNote();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!customDropdown.contains(e.target)) {
+        dropdownOptions.style.display = 'none';
+      }
+    });
+
+    customDropdown.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown' || e.key === 'Enter') {
+        dropdownOptions.style.display = 'block';
+        const first = dropdownOptions.querySelector('.dropdown-option');
+        if (first) first.classList.add('active');
+      }
     });
 
     // Initial note
